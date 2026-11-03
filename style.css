@@ -1990,3 +1990,25 @@ html{overflow-x:clip;max-width:100%}
 .au-fc.f1{left:auto;bottom:auto;top:26%}
 .au-fc.f2{top:auto;right:auto}
 .au-fc.f3{top:auto;left:auto}
+
+
+/* ===== about page: team polaroids on tablet + mobile ===== */
+@media (max-width:1024px){
+  .pol-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6rem 1.2rem}
+}
+@media (max-width:600px){
+  .pol-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.4rem .9rem;padding-block:.8rem}
+  .pol-in{padding:.5rem .5rem .8rem}
+  .pol-photo{aspect-ratio:1/1}
+  .tape{width:60px;height:20px;top:-10px}
+  .pol h3{font-size:1.02rem;margin-top:.6rem;line-height:1.15}
+  .pol-in>span:not(.tape){font-size:.8rem;display:block;line-height:1.3}
+  .fun p{font-size:.78rem;line-height:1.4}
+  /* stagger the second column so it still feels like a pinned wall of photos */
+  .pol:nth-child(even){margin-top:1.4rem}
+}
+@media (max-width:380px){
+  .pol-grid{gap:1.2rem .7rem}
+  .pol h3{font-size:.95rem}
+  .fun p{font-size:.74rem}
+}

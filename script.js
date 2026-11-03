@@ -2,6 +2,8 @@
 (() => {
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  /* coming back from 404.html (Back button or a link): skip the preloader */
+  try { const nv = performance.getEntriesByType('navigation')[0]; if ((nv && nv.type === 'back_forward') || /404\.html/.test(document.referrer)) { const st = document.createElement('style'); st.textContent = '.loader{display:none!important}'; document.head.appendChild(st); } } catch (_) { /* ignore */ }
   /* footer newsletter: email is required + validated in JS, then goes to 404.html and comes back empty */
   function newsletter() {
     const f = $('#nl'), ok = $('#nlok'); if (!f) return;
@@ -697,7 +699,12 @@
     });
     /* coming back (or browser Back) always shows a fresh envelope with an empty field */
     addEventListener('pageshow', ev => {
-      if (ev.persisted) { location.reload(); return; } /* page restored from cache in its "sent" state: reload for a clean start */
+      if (ev.persisted) { /* page restored from cache in its "sent" state: put the envelope back, open and empty, without reloading */
+        gsap.killTweensOf([env, letter, flap, slot, ...sent.children]);
+        gsap.set(env, { clearProps: 'transform,opacity' }); gsap.set(sent.children, { clearProps: 'all' }); sent.classList.remove('show');
+        env.classList.add('open'); gsap.set(flap, { scaleY: -1, zIndex: 1 }); gsap.set(slot, { clipPath: 'inset(-140% -6% 0 -6%)' });
+        isOpen = true; fit();
+      }
       news.reset(); mailErr.textContent = ''; mailErr.classList.remove('show');
       mail.classList.remove('invalid'); if (sendBtn) sendBtn.disabled = false;
     });
