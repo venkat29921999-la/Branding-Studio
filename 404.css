@@ -1,0 +1,115 @@
+/* =====================================================
+   Stackly — 404 page (self-contained, does not need style.css)
+   ===================================================== */
+:root{
+  --ink:#170f24;--cream:#f1ebe0;--gold:#ffb02e;--mute:#b9b0c9;--line:#ffffff1f;
+  --f1:"Bricolage Grotesque",system-ui,sans-serif;--f2:"Manrope",system-ui,sans-serif;
+  --pad:clamp(1.1rem,4vw,3rem)
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;overflow-x:clip}
+body{min-height:100svh;display:grid;place-items:center;background:var(--ink);color:var(--cream);font:400 1rem/1.6 var(--f2);overflow-x:clip;position:relative;padding:5.5rem var(--pad) 4rem}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wordmark{font:800 1.3rem var(--f1);letter-spacing:.04em}
+
+/* ---------- background ---------- */
+.nf-bg{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
+.nf-bg i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:nfFloat 20s ease-in-out infinite}
+.nf-bg i:nth-child(1){width:46vmax;height:46vmax;left:-14vmax;top:-14vmax;background:radial-gradient(circle,color-mix(in srgb,var(--gold) 50%,transparent),transparent 65%)}
+.nf-bg i:nth-child(2){width:40vmax;height:40vmax;right:-12vmax;bottom:-14vmax;background:radial-gradient(circle,#6d4bd1,transparent 65%);animation-delay:-7s}
+.nf-bg i:nth-child(3){width:24vmax;height:24vmax;left:42%;top:34%;background:radial-gradient(circle,color-mix(in srgb,var(--cream) 30%,transparent),transparent 65%);opacity:.16;animation-delay:-12s}
+.nf-bg::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(65% 60% at 50% 45%,#000,transparent);mask-image:radial-gradient(65% 60% at 50% 45%,#000,transparent);opacity:.4}
+@keyframes nfFloat{50%{transform:translate3d(4vmax,3vmax,0) scale(1.12)}}
+.nf-stars{position:fixed;inset:0;z-index:-1;pointer-events:none}
+.nf-stars i{position:absolute;border-radius:50%;background:var(--cream);animation:nfTw 3s ease-in-out infinite}
+@keyframes nfTw{50%{opacity:.15;transform:scale(.6)}}
+.nf-shapes{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;--px:0;--py:0}
+.sh{position:absolute;display:grid;place-items:center;width:clamp(42px,6vw,64px);aspect-ratio:1;border-radius:18px;border:1px solid var(--line);background:color-mix(in srgb,var(--cream) 6%,transparent);color:var(--gold);font-size:clamp(1rem,2vw,1.4rem);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);translate:calc(var(--px)*var(--d)*1px) calc(var(--py)*var(--d)*1px);animation:nfBob 7s ease-in-out infinite}
+.s1{left:8%;top:22%}.s2{right:9%;top:18%;animation-delay:-2s}.s3{left:14%;bottom:20%;animation-delay:-4s}.s4{right:12%;bottom:24%;animation-delay:-1s}.s5{left:46%;top:9%;animation-delay:-5s}
+@keyframes nfBob{50%{transform:translateY(-14px) rotate(6deg)}}
+
+/* ---------- brand + footer ---------- */
+.nf-brand{position:absolute;top:1.2rem;left:var(--pad);z-index:5}
+.nf-brand img{height:30px;width:auto}
+.nf-foot{position:absolute;left:0;right:0;bottom:1rem;text-align:center;font-size:.82rem;color:var(--mute);padding:0 var(--pad)}
+
+/* ---------- content ---------- */
+.nf{position:relative;z-index:2;display:grid;justify-items:center;text-align:center;gap:1.1rem;width:min(100%,720px)}
+.nf-eyebrow{display:inline-flex;align-items:center;gap:.55rem;padding:.4rem 1rem;border:1px solid var(--line);border-radius:99px;background:color-mix(in srgb,var(--cream) 6%,transparent);color:var(--mute);font-size:.88rem}
+.nf-eyebrow i{color:var(--gold)}
+.nf-code{display:flex;align-items:center;justify-content:center;gap:.02em;font:800 clamp(6.5rem,26vw,16rem)/.9 var(--f1);letter-spacing:-.04em;user-select:none}
+.g{display:inline-block;color:var(--cream);text-shadow:0 .04em 0 color-mix(in srgb,var(--gold) 55%,transparent),0 .09em .25em #0008;transition:text-shadow .3s,transform .4s cubic-bezier(.3,1.6,.5,1)}
+.g:hover{transform:translateY(-.04em) rotate(-3deg);animation:nfGlitch .5s steps(2) 1}
+@keyframes nfGlitch{25%{text-shadow:-.03em 0 #ff4d6d,.03em 0 #4dd2ff}50%{text-shadow:.03em 0 #ff4d6d,-.03em 0 #4dd2ff}75%{text-shadow:-.02em .02em #ff4d6d,.02em -.02em #4dd2ff}}
+.ring{position:relative;display:grid;place-items:center;width:.78em;aspect-ratio:1;margin:0 .02em;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffd27d,var(--gold) 55%,#d98200);box-shadow:0 .06em .3em -.02em #000c,inset 0 -.05em .1em #0004,0 0 .5em color-mix(in srgb,var(--gold) 35%,transparent)}
+.ring::before{content:"";position:absolute;inset:-.07em;border-radius:50%;border:2px dashed color-mix(in srgb,var(--gold) 60%,transparent);animation:nfSpin 18s linear infinite}
+@keyframes nfSpin{to{transform:rotate(360deg)}}
+.eye{position:relative;width:62%;aspect-ratio:1;border-radius:50%;background:var(--cream);box-shadow:inset 0 .03em .06em #0005;overflow:hidden;display:grid;place-items:center}
+.pupil{position:absolute;width:42%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#4b3a69,var(--ink) 60%);will-change:transform}
+.pupil::after{content:"";position:absolute;left:22%;top:20%;width:24%;aspect-ratio:1;border-radius:50%;background:#fff;opacity:.9}
+.lid{position:absolute;inset:0;background:var(--gold);transform:translateY(-101%);border-radius:inherit}
+.lid.blink{animation:nfBlink .24s ease-in-out}
+@keyframes nfBlink{50%{transform:translateY(0)}}
+.nf-title{font:800 clamp(1.5rem,4.2vw,2.5rem)/1.15 var(--f1);letter-spacing:-.02em}
+.nf-text{max-width:52ch;color:var(--mute)}
+.nf-path{display:inline-block;max-width:100%;vertical-align:bottom;padding:.1rem .6rem;border-radius:8px;background:color-mix(in srgb,var(--cream) 10%,transparent);color:var(--gold);font:600 .88em/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nf-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:.5rem;width:100%}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.95rem 1.7rem;border-radius:99px;border:1.5px solid transparent;font:600 1rem var(--f2);cursor:pointer;overflow:hidden;transition:transform .35s cubic-bezier(.3,1.6,.5,1),background .3s,color .3s,border-color .3s,box-shadow .3s;max-width:100%;text-align:center}
+.btn span{min-width:0}
+.btn-solid{background:var(--gold);color:var(--ink);box-shadow:0 18px 36px -16px var(--gold)}
+.btn-solid::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,#ffffff66,transparent);transform:skewX(-20deg);animation:nfShine 4s ease-in-out infinite 1.5s}
+@keyframes nfShine{0%,60%{left:-60%}100%{left:130%}}
+.btn-ghost{border-color:var(--line);color:var(--cream);background:color-mix(in srgb,var(--cream) 5%,transparent)}
+.btn:hover{transform:translateY(-3px)}
+.btn-solid:hover{box-shadow:0 22px 40px -14px var(--gold)}
+.btn-ghost:hover{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+.btn i{transition:transform .35s}
+#prevBtn:hover i{transform:translateX(-5px)}
+#homeBtn:hover i{transform:translateY(-2px) scale(1.15)}
+.btn:focus-visible,.nf-links a:focus-visible,.nf-brand:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.nf-prev{font-size:.85rem;color:var(--mute)}
+.nf-prev b{color:var(--cream);font-weight:600}
+.nf-links{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.5rem .6rem;margin-top:.6rem;color:var(--mute);font-size:.9rem}
+.nf-links a{padding:.3rem .9rem;border:1px solid var(--line);border-radius:99px;transition:background .3s,color .3s,border-color .3s}
+.nf-links a:hover{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+
+/* ---------- entrance (added by 404.js) ---------- */
+.js .g,.js .ring,.js .nf-eyebrow,.js .nf-title,.js .nf-text,.js .nf-actions .btn,.js .nf-prev,.js .nf-links,.js .nf-brand{opacity:0}
+.go .nf-brand{animation:nfFade .8s .1s both}
+.go .nf-eyebrow{animation:nfUp .7s .2s both}
+.go .g1{animation:nfDrop .9s .35s cubic-bezier(.3,1.5,.5,1) both}
+.go .g2{animation:nfDrop .9s .55s cubic-bezier(.3,1.5,.5,1) both}
+.go .ring{animation:nfPop 1s .45s cubic-bezier(.3,1.6,.5,1) both}
+.go .nf-title{animation:nfUp .8s .85s both}
+.go .nf-text{animation:nfUp .8s 1s both}
+.go .nf-actions .btn:nth-child(1){animation:nfUp .8s 1.15s both}
+.go .nf-actions .btn:nth-child(2){animation:nfUp .8s 1.28s both}
+.go .nf-prev{animation:nfUp .8s 1.4s both}
+.go .nf-links{animation:nfUp .8s 1.5s both}
+@keyframes nfUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes nfFade{from{opacity:0}to{opacity:1}}
+@keyframes nfDrop{from{opacity:0;transform:translateY(-120px) rotate(-14deg)}to{opacity:1;transform:none}}
+@keyframes nfPop{from{opacity:0;transform:scale(0) rotate(-120deg)}to{opacity:1;transform:none}}
+
+/* ---------- responsive ---------- */
+@media (max-width:640px){
+  body{padding-top:5rem;padding-bottom:4.5rem}
+  .nf{gap:.9rem}
+  .nf-actions{flex-direction:column;align-items:stretch}
+  .nf-actions .btn{width:100%}
+  .sh{opacity:.55}
+  .s5{display:none}
+}
+@media (max-width:380px){
+  .nf-brand img{height:26px}
+  .btn{padding:.9rem 1.2rem;font-size:.95rem}
+}
+@media (max-height:560px) and (orientation:landscape){
+  body{place-items:start center;padding-top:4.2rem}
+  .nf-code{font-size:clamp(4.5rem,18vh,9rem)}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;animation-delay:0s!important;transition-duration:.01ms!important}
+  .js .g,.js .ring,.js .nf-eyebrow,.js .nf-title,.js .nf-text,.js .nf-actions .btn,.js .nf-prev,.js .nf-links,.js .nf-brand{opacity:1}
+}

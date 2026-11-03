@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Login — Stackly</title>
+<meta name="description" content="Log in to your Stackly admin or user dashboard.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-auth page-login">
+<div class="au-bg" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="au-curtain" aria-hidden="true"><i></i><i></i></div>
+<main class="au-wrap">
+  <a href="index.html" class="btn btn-ghost btn-sm au-back au-backbtn"><i class="fa-solid fa-arrow-left"></i> <span class="au-lg">Back to </span><span class="au-h">home</span></a><section class="au-show">
+    <a class="au-brand" href="index.html" aria-label="Stackly home" style="margin-bottom:1.4rem"><img src="Assest/stackly-logo.webp" alt="Stackly" width="150" height="40"></a>
+    <p class="au-eyebrow"><i class="fa-solid fa-wand-magic-sparkles"></i> Secure client and team portal</p>
+    <h1 class="au-h1"><span class="w"><span>Run</span></span> <span class="w"><span>every</span></span> <span class="w"><span>brand</span></span> <span class="w"><span>from</span></span> <em>one calm place.</em></h1>
+    <p class="au-lead">Log in to follow projects, read the shared inbox and keep every brand moving, all in one beautifully simple dashboard.</p>
+    <div class="au-stage" aria-hidden="true">
+      <div class="au-arch"><img src="Assest/bs4.webp" alt="" width="700" height="560" decoding="async"></div>
+      <div class="au-fc f1"><i class="fa-solid fa-bars-progress"></i><div><b>12 projects</b><span>moving this week</span></div></div>
+      <div class="au-fc f2"><i class="fa-solid fa-envelope"></i><div><b>3 new emails</b><span>replied in 24h</span></div></div>
+      <div class="au-fc f3"><i class="fa-solid fa-circle-check"></i><div><b>98% on time</b><span>delivery rate</span></div></div>
+      <div class="au-badge"><svg viewBox="0 0 100 100"><defs><path id="auBd" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs><text><textPath href="#auBd" textLength="236" lengthAdjust="spacing">STACKLY · DASHBOARD · SECURE · </textPath></text></svg><i class="fa-solid fa-lock"></i></div>
+    </div>
+  </section>
+  <section class="au-card" aria-labelledby="lgTitle">
+    <h2 id="lgTitle">Welcome back</h2>
+    <p class="au-sub">Log in to continue to your dashboard.</p>
+    <form class="au-form" id="loginForm" novalidate>
+      <div class="au-fld"><i class="fa-solid fa-envelope ic" aria-hidden="true"></i><input id="lgEmail" name="lgEmail" type="email" placeholder=" " autocomplete="email" inputmode="email" required><label for="lgEmail">Email address</label><small class="au-err">Enter a valid email address.</small></div>
+      <div class="au-fld"><i class="fa-solid fa-lock ic" aria-hidden="true"></i><input id="lgPass" name="lgPass" type="password" placeholder=" " autocomplete="current-password"  required><label for="lgPass">Password</label><button class="au-eye" type="button" aria-label="Show password" aria-pressed="false"><i class="fa-solid fa-eye"></i></button><small class="au-err">Enter your password.</small></div>
+      <fieldset class="au-roles">
+        <legend>Log in as</legend>
+        <div class="au-rwrap">
+          <input type="radio" id="roleUser" name="role" value="user" checked><label for="roleUser"><i class="fa-solid fa-user"></i> User</label>
+          <input type="radio" id="roleAdmin" name="role" value="admin"><label for="roleAdmin"><i class="fa-solid fa-user-shield"></i> Admin</label>
+          <i class="au-pill" aria-hidden="true"></i>
+        </div>
+        <p class="au-hint" id="roleHint" aria-live="polite"></p>
+      </fieldset>
+      <div class="au-row"><label class="au-check"><input type="checkbox" id="lgRemember"><span class="bx"><i class="fa-solid fa-check"></i></span> Keep me signed in</label><a href="404.html" class="au-home" style="margin:0">Forgot password?</a></div>
+      <div class="au-msg" id="auMsg" role="alert"></div>
+      <button class="btn au-btn" type="submit"><span class="t">Log in <i class="fa-solid fa-arrow-right"></i></span><span class="sp" aria-hidden="true"></span></button>
+    </form>
+    <div class="au-demo"><span>Try a demo:</span><button type="button" data-demo="admin"><i class="fa-solid fa-user-shield"></i> Admin</button><button type="button" data-demo="user"><i class="fa-solid fa-user"></i> User</button></div>
+    <p class="au-alt">New to Stackly? <a href="signup.html">Create an account</a></p>
+    <p class="au-alt" style="margin-top:.4rem"><a href="index.html" class="au-home"><i class="fa-solid fa-arrow-left"></i> Back to home</a></p>
+    <div class="au-done" hidden><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42"/><path d="M30 52 l14 14 l27 -30"/></svg><h3 class="au-title">Logged in</h3><p></p></div>
+  </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>

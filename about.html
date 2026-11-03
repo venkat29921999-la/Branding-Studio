@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Stackly Branding Studio</title>
+<meta name="description" content="Meet Stackly: a small branding studio of strategists, designers and developers building identities, websites and campaigns people remember.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-about">
+<div class="loader" aria-hidden="true"><img src="Assest/stackly-logo.webp" alt=""><div class="lbar"><i></i></div></div>
+<div class="cursor" aria-hidden="true"></div>
+
+<!-- HEADER (same as home) -->
+<header class="header" id="header">
+  <a href="index.html" class="brand" aria-label="Stackly home"><img src="Assest/stackly-logo.webp" alt="Stackly" width="150" height="40"></a>
+  <nav class="nav" id="nav" aria-label="Main">
+    <span class="ind" aria-hidden="true"></span>
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active" aria-current="page">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html" class="btn btn-sm nav-login"><i class="fa-solid fa-user"></i> Login</a>
+  </nav>
+  <a href="login.html" class="btn btn-sm login"><i class="fa-solid fa-user"></i> Login</a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="progress"></div>
+</header>
+
+<main>
+<!-- 1 HERO: flipping letters + sliced image that waves -->
+<section class="ab-hero" id="about-top">
+  <span class="ghost" aria-hidden="true">ABOUT US · ABOUT US</span>
+  <p class="crumb"><a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>About</span></p>
+  <h1 class="ab-title">A studio that sweats the <em>details.</em></h1>
+  <p class="ab-lead">Brands that feel <span class="slot"><span class="slot-in"><b>bolder</b><b>calmer</b><b>faster</b><b>unforgettable</b><b>bolder</b></span></span> from day one.</p>
+  <div class="slats" role="img" aria-label="The Stackly team working together in the studio">
+    <i class="slat" style="--i:0"><img src="Assest/bs4.webp" alt=""></i>
+    <i class="slat" style="--i:1"><img src="Assest/bs4.webp" alt=""></i>
+    <i class="slat" style="--i:2"><img src="Assest/bs4.webp" alt=""></i>
+    <i class="slat" style="--i:3"><img src="Assest/bs4.webp" alt=""></i>
+    <i class="slat" style="--i:4"><img src="Assest/bs4.webp" alt=""></i>
+    <i class="slat" style="--i:5"><img src="Assest/bs4.webp" alt=""></i>
+    <i class="slat" style="--i:6"><img src="Assest/bs4.webp" alt=""></i>
+    <span class="slats-tag"><i class="fa-solid fa-location-dot"></i> Chennai · since 2014</span>
+  </div>
+</section>
+
+<!-- 2 STORY: sticky stage - the year rolls and the photo wipes as you scroll (no side scrolling) -->
+<section class="ab-story" id="story">
+  <div class="head"><p class="tag">Our story</p><h2>Twelve years, five chapters</h2></div>
+  <div class="st-wrap">
+    <div class="st-stage" aria-hidden="true">
+      <div class="st-imgs">
+        <figure><img src="Assest/bs16.webp" alt="" loading="lazy"></figure>
+        <figure><img src="Assest/bs5.webp" alt="" loading="lazy"></figure>
+        <figure><img src="Assest/bs3.webp" alt="" loading="lazy"></figure>
+        <figure><img src="Assest/bs26.webp" alt="" loading="lazy"></figure>
+        <figure><img src="Assest/bs17.webp" alt="" loading="lazy"></figure>
+      </div>
+      <div class="st-year"><div class="st-roll"><span>2014</span><span>2017</span><span>2020</span><span>2023</span><span>2026</span></div></div>
+      <div class="st-count"><b>01</b> / 05</div>
+    </div>
+    <div class="st-list">
+      <div class="st-line" aria-hidden="true"><i></i></div>
+      <article class="st-ch"><span class="st-yr">2014</span><h3>Two desks, one big idea</h3><p>Stackly began in a rented room with two desks, a shared monitor and a belief that small brands deserve big thinking.</p><figure class="st-m"><img src="Assest/bs16.webp" alt="Early workshop at the Stackly studio" loading="lazy"></figure></article>
+      <article class="st-ch"><span class="st-yr">2017</span><h3>The studio gets a door</h3><p>Our first proper office opened. Designers, strategists and developers moved into one room, and the work got sharper overnight.</p><figure class="st-m"><img src="Assest/bs5.webp" alt="Stackly's first office" loading="lazy"></figure></article>
+      <article class="st-ch"><span class="st-yr">2020</span><h3>Going remote-ready</h3><p>We rebuilt our process for screens and shared boards, then kept the habits that made distance feel small.</p><figure class="st-m"><img src="Assest/bs3.webp" alt="Creative workspace" loading="lazy"></figure></article>
+      <article class="st-ch"><span class="st-yr">2023</span><h3>Design meets code</h3><p>An in-house build team joined, so every identity we shipped came with a fast, animated website to match.</p><figure class="st-m"><img src="Assest/bs26.webp" alt="Developers reviewing code" loading="lazy"></figure></article>
+      <article class="st-ch"><span class="st-yr">2026</span><h3>280+ launches and counting</h3><p>Clients in 18 countries and 36 awards later, we still sketch on paper first and still answer every email ourselves.</p><figure class="st-m"><img src="Assest/bs17.webp" alt="Client meeting at the studio" loading="lazy"></figure></article>
+    </div>
+  </div>
+</section>
+
+<!-- 3 VALUES: expanding image panels -->
+<section class="sec ab-vals" id="values">
+  <div class="head"><p class="tag">What we believe</p><h2>Four values we never trade</h2></div>
+  <div class="vals" id="vals">
+    <article class="val on" tabindex="0" aria-label="Curiosity">
+      <img src="Assest/bs6.webp" alt="Colour palette on paper" loading="lazy">
+      <span class="vn">01</span><span class="vt">Curiosity</span>
+      <div class="vc"><i class="fa-solid fa-magnifying-glass"></i><h3>Curiosity</h3><p>We ask the awkward questions first. Great brands start with understanding people, not with picking a colour.</p></div>
+    </article>
+    <article class="val" tabindex="0" aria-label="Craft">
+      <img src="Assest/bs1.webp" alt="Designer sketching" loading="lazy">
+      <span class="vn">02</span><span class="vt">Craft</span>
+      <div class="vc"><i class="fa-solid fa-pen-nib"></i><h3>Craft</h3><p>Every curve, kerning pair and easing curve is reviewed by hand. Details are where brands feel real.</p></div>
+    </article>
+    <article class="val" tabindex="0" aria-label="Candor">
+      <img src="Assest/bs27.webp" alt="Team planning together" loading="lazy">
+      <span class="vn">03</span><span class="vt">Candor</span>
+      <div class="vc"><i class="fa-solid fa-comments"></i><h3>Candor</h3><p>Honest feedback, early and kindly. No surprises in the process and no padding in the invoice.</p></div>
+    </article>
+    <article class="val" tabindex="0" aria-label="Courage">
+      <img src="Assest/bs2.webp" alt="Bold branding mockup" loading="lazy">
+      <span class="vn">04</span><span class="vt">Courage</span>
+      <div class="vc"><i class="fa-solid fa-bolt"></i><h3>Courage</h3><p>The safe option is rarely memorable. We push every client toward the idea that makes them a little nervous.</p></div>
+    </article>
+  </div>
+</section>
+
+<!-- 4 MANIFESTO: words light up, photos grow inside the sentence -->
+<section class="ab-mani" id="manifesto">
+  <p class="tag">Our manifesto</p>
+  <p class="mani">We don't decorate, we design <span class="pimg"><img src="Assest/bs3.webp" alt="" loading="lazy"></span> with a point of view. Every colour, every curve and every <span class="pimg"><img src="Assest/bs7.webp" alt="" loading="lazy"></span> pixel has to earn its place, because attention is expensive and <span class="pimg"><img src="Assest/bs18.webp" alt="" loading="lazy"></span> people remember what feels true.</p>
+</section>
+
+<!-- 5 TEAM: polaroids fly out of a pile -->
+<section class="sec ab-team" id="team">
+  <div class="head"><p class="tag">The people</p><h2>Meet the humans behind the pixels</h2></div>
+  <div class="pol-grid">
+    <article class="pol"><div class="pol-in" tabindex="0"><span class="tape"></span>
+      <div class="pol-photo"><img src="Assest/bs20.webp" alt="Maya Rao, Creative Director" loading="lazy"></div>
+      <div class="fun"><b>Fun fact</b><p>Carries 40 colour swatches in her bag, just in case.</p></div>
+      <h3>Maya Rao</h3><span>Creative Director</span></div></article>
+    <article class="pol"><div class="pol-in" tabindex="0"><span class="tape"></span>
+      <div class="pol-photo"><img src="Assest/bs21.webp" alt="Arjun Mehta, Strategy Lead" loading="lazy"></div>
+      <div class="fun"><b>Fun fact</b><p>Has never walked into a kickoff without a one-page brief.</p></div>
+      <h3>Arjun Mehta</h3><span>Strategy Lead</span></div></article>
+    <article class="pol"><div class="pol-in" tabindex="0"><span class="tape"></span>
+      <div class="pol-photo"><img src="Assest/bs22.webp" alt="Sara Khan, Motion Designer" loading="lazy"></div>
+      <div class="fun"><b>Fun fact</b><p>Storyboards her weekend plans frame by frame.</p></div>
+      <h3>Sara Khan</h3><span>Motion Designer</span></div></article>
+    <article class="pol"><div class="pol-in" tabindex="0"><span class="tape"></span>
+      <div class="pol-photo"><img src="Assest/bs23.webp" alt="Dev Patel, Lead Developer" loading="lazy"></div>
+      <div class="fun"><b>Fun fact</b><p>Optimises everything, including the studio coffee queue.</p></div>
+      <h3>Dev Patel</h3><span>Lead Developer</span></div></article>
+  </div>
+</section>
+
+<!-- 6 INSIDE THE STUDIO: bento with rolling odometer numbers -->
+<section class="sec ab-bento" id="culture">
+  <div class="head"><p class="tag">Inside the studio</p><h2>Numbers, chai and a lot of sketching</h2></div>
+  <div class="bento">
+    <article class="bt b1"><img src="Assest/bs19.webp" alt="The Stackly team around a table" loading="lazy"><div class="bt-txt"><h3>One room. One team.</h3><p>Strategy, design and code sit together, so ideas never get lost in handoffs.</p></div></article>
+    <article class="bt b2"><i class="fa-solid fa-rocket"></i><div class="od" data-od="280+"></div><span>Projects shipped</span></article>
+    <article class="bt b3"><img src="Assest/bs16.webp" alt="Whiteboard workshop" loading="lazy"></article>
+    <article class="bt b4"><i class="fa-solid fa-star"></i><div class="od" data-od="4.9"></div><span>Average client rating</span></article>
+    <article class="bt b5"><i class="fa-solid fa-earth-americas"></i><div class="od" data-od="18"></div><span>Countries served</span></article>
+    <article class="bt b6"><div class="cup" aria-hidden="true"><s></s><s></s><s></s><i class="fa-solid fa-mug-hot"></i></div><div><div class="od" data-od="1,200"></div><span>cups of chai fuel the studio every month</span></div></article>
+  </div>
+</section>
+
+<!-- 7 CTA: image circle grows to fill the screen -->
+<section class="ab-cta" id="cta">
+  <div class="cta-stick">
+    <div class="cta-img"><img src="Assest/bs27.webp" alt="" loading="lazy"></div>
+    <div class="orbit-wrap" aria-hidden="true"><div class="orbit"><i class="fa-solid fa-pen-nib"></i><i class="fa-solid fa-lightbulb"></i><i class="fa-solid fa-rocket"></i></div></div>
+    <div class="cta-over">
+      <p class="tag">Say hello</p>
+      <h2 class="nosplit">Let's make something people remember.</h2>
+      <a href="404.html" class="btn"><i class="fa-solid fa-paper-plane"></i> Start a project</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER (same as home) -->
+<footer class="footer">
+  <div class="f-top">
+    <div><a href="index.html" class="f-logo" aria-label="Stackly home"><img src="Assest/stackly-logo.webp" alt="Stackly" width="150" height="40"></a><p>A branding studio building identities that last.</p>
+      <div class="social"><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a><a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div></div>
+    <div><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="404.html">Services</a><a href="404.html">Blog</a><a href="contact.html">Contact</a></div>
+    <div><h4>Studio</h4><a href="404.html">Work</a><a href="404.html">Process</a><a href="404.html">Team</a><a href="404.html">Clients</a></div>
+    <div class="news"><h4>Stay in the loop</h4><p>Monthly design notes. No spam.</p>
+      <form class="nl" id="nl"><input type="email" required placeholder="Your email" aria-label="Email address"><button aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button></form>
+      <span class="nlok" id="nlok"><i class="fa-solid fa-circle-check"></i> You're on the list!</span>
+      <ul class="f-contact"><li><i class="fa-solid fa-envelope"></i> hello@stackly.studio</li><li><i class="fa-solid fa-phone"></i> +91 98765 43210</li><li><i class="fa-solid fa-location-dot"></i> Chennai, India</li></ul></div>
+  </div>
+  <div class="bigword" aria-hidden="true">STACKLY</div>
+  <p class="copy">© 2026 Stackly Branding Studio. All rights reserved.</p>
+</footer>
+<button class="top" id="top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

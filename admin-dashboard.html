@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Admin dashboard — Stackly</title>
+<meta name="description" content="Stackly dashboard">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<script>
+/* send visitors without the right session back to the login page before anything renders */
+(function(){try{var s=JSON.parse(sessionStorage.getItem('stackly_session')||localStorage.getItem('stackly_session')||'null');if(!s||s.role!=='admin'){location.replace('login.html');}}catch(e){location.replace('login.html');}})();
+</script>
+</head>
+<body class="page-dash page-admin">
+<div class="au-bg" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="au-curtain" aria-hidden="true"><i></i><i></i></div>
+<div class="db">
+  <aside class="db-side" id="dbSide" aria-label="Dashboard navigation">
+    <a class="db-brand" href="index.html" aria-label="Stackly home"><img src="Assest/stackly-logo.webp" alt="Stackly" width="150" height="40"></a>
+    <div class="db-user"><span class="db-av js-init">?</span><div><b class="js-name">—</b><small class="js-email">—</small><span class="db-role">Admin</span></div></div>
+    <nav class="db-nav" aria-label="Sections">
+      <i class="db-ind" aria-hidden="true"></i>
+      <button class="db-link on" type="button" data-panel="overview"><i class="fa-solid fa-gauge-high"></i><span>Overview</span></button>
+      <button class="db-link" type="button" data-panel="emails"><i class="fa-solid fa-envelope"></i><span>Emails</span><b class="db-badge js-unread zero">0</b></button>
+      <button class="db-link" type="button" data-panel="users"><i class="fa-solid fa-users"></i><span>Users</span></button>
+      <button class="db-link" type="button" data-panel="projects"><i class="fa-solid fa-bars-progress"></i><span>Projects</span></button>
+      <button class="db-link" type="button" data-panel="settings"><i class="fa-solid fa-gear"></i><span>Settings</span></button>
+      </nav>
+    <div class="db-side-foot"><a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to home</a><button type="button" class="js-logout"><i class="fa-solid fa-right-from-bracket"></i> Log out</button></div>
+  </aside>
+  <div class="db-scrim" id="dbScrim"></div>
+  <div class="db-main">
+    <header class="db-top">
+      <button class="db-burger" id="dbBurger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="dbSide"><span></span><span></span><span></span></button>
+      <div class="db-title"><small id="dbGreet">Hello</small><h1 id="dbTitle">Overview</h1></div>
+      <div class="db-tools">
+        <div class="db-pos"><button class="db-ib" id="btnBell" type="button" aria-label="Notifications" aria-expanded="false" aria-haspopup="true"><i class="fa-solid fa-bell"></i><span class="dot js-unread zero">0</span></button>
+          <div class="db-dd" id="ddBell" hidden><h4>Unread emails</h4><div id="bellList"></div><button class="row" type="button" data-go="emails"><i class="fa-solid fa-inbox"></i><span class="txt"><b>Open the inbox</b></span></button></div></div>
+        <div class="db-pos"><button class="db-me" id="btnMe" type="button" aria-label="Account menu" aria-expanded="false" aria-haspopup="true"><span class="db-av js-init">?</span><span class="js-first">You</span><i class="fa-solid fa-chevron-down" style="font-size:.7rem"></i></button>
+          <div class="db-dd sm" id="ddMe" hidden><h4 class="js-email">—</h4><button class="row" type="button" data-go="settings"><i class="fa-solid fa-gear"></i><span class="txt"><b>Settings</b></span></button><a href="index.html"><i class="fa-solid fa-house"></i><span class="txt"><b>Back to home</b></span></a><button class="row js-logout" type="button"><i class="fa-solid fa-right-from-bracket"></i><span class="txt"><b>Log out</b></span></button></div></div>
+      </div>
+    </header>
+    <main>
+      <section class="db-panel" id="p-overview" aria-label="Overview">
+        <div class="db-kpis">
+          <article class="db-card db-kpi"><span class="ico"><i class="fa-solid fa-users"></i></span><span class="lbl">Total clients</span><span class="val"><span data-count="140">0</span></span><span class="dl "><i class="fa-solid fa-arrow-up"></i> 12% this month</span><svg viewBox="0 0 100 34" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 L20 22 L40 26 L60 12 L80 16 L100 4"/></svg></article>
+          <article class="db-card db-kpi"><span class="ico"><i class="fa-solid fa-bars-progress"></i></span><span class="lbl">Active projects</span><span class="val"><span id="kpiProj">0</span></span><span class="dl "><i class="fa-solid fa-arrow-up"></i> 3 new</span><svg viewBox="0 0 100 34" preserveAspectRatio="none" aria-hidden="true"><path d="M0 28 L20 30 L40 18 L60 20 L80 8 L100 12"/></svg></article>
+          <article class="db-card db-kpi"><span class="ico"><i class="fa-solid fa-indian-rupee-sign"></i></span><span class="lbl">Revenue this month</span><span class="val"><span data-count="18.4" data-dec="1" data-pre="₹" data-suf="L">0</span></span><span class="dl "><i class="fa-solid fa-arrow-up"></i> 8% vs last month</span><svg viewBox="0 0 100 34" preserveAspectRatio="none" aria-hidden="true"><path d="M0 32 L20 24 L40 28 L60 14 L80 18 L100 2"/></svg></article>
+          <article class="db-card db-kpi"><span class="ico"><i class="fa-solid fa-envelope"></i></span><span class="lbl">Unread emails</span><span class="val"><span id="kpiUnread" data-count="0">0</span></span><svg viewBox="0 0 100 34" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 L20 24 L40 10 L60 22 L80 6 L100 14"/></svg></article>
+        </div>
+        <div class="db-row">
+          <article class="db-card"><div class="db-ch"><h2>Enquiries</h2><div class="db-seg" role="group" aria-label="Range"><button type="button" class="on" data-range="7d">7 days</button><button type="button" data-range="30d">30 days</button><button type="button" data-range="12m">12 months</button></div></div><div class="db-chart"><svg id="chart" viewBox="0 0 600 240" role="img" aria-label="Chart"></svg><div class="db-tip" id="chartTip"></div></div></article>
+          <article class="db-card"><div class="db-ch"><h2>Latest emails</h2><button class="btn btn-ghost btn-sm" type="button" data-go="emails">View all</button></div><div class="db-mini" id="miniMail"></div></article>
+        </div>
+        <div class="db-row eq">
+          <article class="db-card"><div class="db-ch"><h2>Recent activity</h2></div><ul class="db-feed" id="actList"></ul></article>
+          <article class="db-card"><div class="db-ch"><h2>Quick actions</h2></div>
+            <div class="db-quick"><a class="btn" href="404.html"><i class="fa-solid fa-pen"></i> Compose an email</a><a class="btn btn-ghost" href="404.html"><i class="fa-solid fa-users"></i> Manage users</a><a class="btn btn-ghost" href="404.html"><i class="fa-solid fa-bars-progress"></i> Review projects</a><a class="btn btn-ghost" href="404.html"><i class="fa-solid fa-gear"></i> Account settings</a></div></article>
+        </div>
+      </section>
+      <section class="db-panel" id="p-emails" aria-label="Emails">
+        <div class="mail" id="mail">
+          <div class="mail-col">
+            <div class="mail-tools">
+              <div class="mail-top"><div class="db-search" style="flex:1 1 140px"><i class="fa-solid fa-magnifying-glass"></i><input id="mailSearch" type="search" placeholder="Search emails" aria-label="Search emails"></div><a class="btn btn-sm" href="404.html"><i class="fa-solid fa-pen"></i> Compose</a></div>
+              <div class="mail-tabs"><button class="mail-tab on" type="button" data-f="all">All mail</button><button class="mail-tab" type="button" data-f="inbox">Inbox <b>0</b></button><button class="mail-tab" type="button" data-f="starred">Starred</button><button class="mail-tab" type="button" data-f="sent">Sent</button><button class="mail-tab" type="button" id="markAll"><i class="fa-solid fa-check-double"></i> Mark all read</button></div>
+            </div>
+            <ul class="mail-list" id="mailList" aria-live="polite"></ul>
+          </div>
+          <div class="mail-reader" id="mailReader" aria-live="polite"></div>
+        </div>
+      </section>
+      <section class="db-panel" id="p-users" aria-label="Users">
+        <article class="db-card">
+          <div class="db-tools2"><div class="db-search"><i class="fa-solid fa-magnifying-glass"></i><input id="userSearch" type="search" placeholder="Search name or email" aria-label="Search users"></div>
+            <div class="db-seg" role="group" aria-label="Filter by role"><button type="button" class="on" data-uf="all">All</button><button type="button" data-uf="admin">Admins</button><button type="button" data-uf="user">Users</button></div></div>
+          <p id="userCount" style="color:var(--mute);font-size:.85rem;margin-bottom:.6rem"></p>
+          <table class="db-table"><thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Joined</th><th>Remove</th></tr></thead><tbody id="userRows"></tbody></table>
+        </article>
+      </section>
+      <section class="db-panel" id="p-projects" aria-label="Projects"><div class="db-projs" id="projGrid"></div></section>
+      <section class="db-panel" id="p-settings" aria-label="Settings">
+        <div class="db-set">
+          <article class="db-card"><div class="db-ch"><h2>Profile</h2><span class="db-chip admin">Admin</span></div>
+            <form id="profileForm" class="au-form" novalidate>
+              <div class="au-fld"><i class="fa-solid fa-user ic"></i><input id="setName" type="text" placeholder=" " autocomplete="name"><label for="setName">Full name</label></div>
+              <div class="au-fld"><i class="fa-solid fa-envelope ic"></i><input id="setEmail" type="email" placeholder=" " readonly><label for="setEmail">Email (cannot be changed)</label></div>
+              <div class="au-msg" id="profMsg" role="alert"></div>
+              <button class="btn" type="submit"><i class="fa-solid fa-floppy-disk"></i> Save profile</button>
+            </form></article>
+          <article class="db-card"><div class="db-ch"><h2>Change password</h2></div>
+            <form id="passForm" class="au-form" novalidate>
+              <div class="au-fld"><i class="fa-solid fa-lock ic"></i><input id="curPass" type="password" placeholder=" " autocomplete="current-password"><label for="curPass">Current password</label></div>
+              <div class="au-fld"><i class="fa-solid fa-key ic"></i><input id="newPass" type="password" placeholder=" " autocomplete="new-password"><label for="newPass">New password</label></div>
+              <div class="au-fld"><i class="fa-solid fa-key ic"></i><input id="newPass2" type="password" placeholder=" " autocomplete="new-password"><label for="newPass2">Confirm new password</label></div>
+              <div class="au-msg" id="passMsg" role="alert"></div>
+              <button class="btn" type="submit"><i class="fa-solid fa-shield-halved"></i> Update password</button>
+            </form></article>
+          <article class="db-card"><div class="db-ch"><h2>Preferences</h2></div>
+            <label class="db-sw"><div><b>Email notifications</b><small>Get a ping when new mail arrives</small></div><input type="checkbox" data-pref="notify"><span class="tr"></span></label>
+            <label class="db-sw"><div><b>Weekly digest</b><small>A summary every Monday morning</small></div><input type="checkbox" data-pref="digest"><span class="tr"></span></label>
+            <label class="db-sw"><div><b>Sound effects</b><small>Play a soft sound on new mail</small></div><input type="checkbox" data-pref="sound"><span class="tr"></span></label>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+<div class="db-modal" id="composeModal" role="dialog" aria-modal="true" aria-labelledby="cmTitle" hidden>
+  <div class="db-dialog"><h2 id="cmTitle">New email</h2>
+    <form class="au-form" id="composeForm" novalidate>
+      <div class="au-fld"><i class="fa-solid fa-at ic" aria-hidden="true"></i><input id="cmTo" type="email" placeholder=" " autocomplete="off" inputmode="email"><label for="cmTo">To (email)</label></div>
+      <div class="au-fld"><i class="fa-solid fa-heading ic" aria-hidden="true"></i><input id="cmSub" type="text" placeholder=" " autocomplete="off"><label for="cmSub">Subject</label></div>
+      <textarea class="db-ta" id="cmBody" placeholder="Write your message…" aria-label="Message"></textarea>
+      <div class="au-msg" id="cmErr" role="alert"></div>
+      <div class="db-acts"><button type="button" class="btn btn-ghost" data-close>Cancel</button><button class="btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button></div>
+    </form></div>
+</div>
+<div class="db-toasts" id="toasts" aria-live="polite"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>

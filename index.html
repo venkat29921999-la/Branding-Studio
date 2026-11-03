@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stackly — Branding Studio</title>
+<meta name="description" content="Stackly is a branding studio crafting identities, websites and campaigns that people remember.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="loader" aria-hidden="true"><img src="Assest/stackly-logo.webp" alt=""><div class="lbar"><i></i></div></div>
+<div class="cursor" aria-hidden="true"></div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <a href="#home" class="brand" aria-label="Stackly home"><img src="Assest/stackly-logo.webp" alt="Stackly" width="150" height="40"></a>
+  <nav class="nav" id="nav" aria-label="Main">
+    <span class="ind" aria-hidden="true"></span>
+    <a href="#home" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html" class="btn btn-sm nav-login"><i class="fa-solid fa-user"></i> Login</a>
+  </nav>
+  <a href="login.html" class="btn btn-sm login"><i class="fa-solid fa-user"></i> Login</a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="progress"></div>
+</header>
+
+<main>
+<!-- 1 HERO -->
+<section class="hero" id="home">
+  <div class="spot"></div>
+  <div class="hero-copy">
+    <p class="pill"><i class="fa-solid fa-sparkles"></i> Branding studio · est. 2014</p>
+    <h1 class="split"><span><span>We shape brands</span></span><span><span>people <em>remember.<svg class="squig" viewBox="0 0 300 14" preserveAspectRatio="none"><path d="M2 9 C 40 0, 70 14, 110 6 S 190 2, 298 9" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg></em></span></span></h1>
+    <p class="lead">Identity, websites and campaigns for ambitious companies. We turn a quiet idea into a brand that is hard to ignore.</p>
+    <div class="cta">
+      <a href="404.html" class="btn"><i class="fa-solid fa-arrow-right"></i> See our work</a>
+      <a href="404.html" class="btn btn-ghost"><i class="fa-solid fa-play"></i> Start a project</a>
+    </div>
+  </div>
+  <div class="hero-art" id="heroArt">
+    <div class="orb"></div>
+    <i class="fa-solid fa-plus float f1"></i><i class="fa-solid fa-circle float f2"></i><i class="fa-solid fa-star float f3"></i>
+    <figure class="h-img h1" data-depth="30"><img src="Assest/bs1.webp" alt="Designer sketching a brand identity"></figure>
+    <figure class="h-img h2" data-depth="55"><img src="Assest/bs2.webp" alt="Branding mockup on a desk"></figure>
+    <figure class="h-img h3" data-depth="20"><img src="Assest/bs3.webp" alt="Creative workspace"></figure>
+    <div class="badge" data-depth="40"><svg viewBox="0 0 120 120"><defs><path id="c" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"/></defs><text><textPath href="#c">design · strategy · motion · identity · </textPath></text></svg><i class="fa-solid fa-pen-nib"></i></div>
+    <div class="chip c1" data-depth="70"><i class="fa-solid fa-star"></i> 4.9 client rating</div>
+    <div class="chip c2" data-depth="45"><i class="fa-solid fa-rocket"></i> 280+ launches</div>
+  </div>
+  <a href="#about" class="scroll-hint" aria-label="Scroll"><i class="fa-solid fa-chevron-down"></i></a>
+</section>
+
+<!-- 2 MARQUEE -->
+<section class="marquee" aria-label="Disciplines">
+  <div class="track">
+    <span><i class="fa-solid fa-asterisk"></i> Brand identity</span><span><i class="fa-solid fa-asterisk"></i> Web design</span><span><i class="fa-solid fa-asterisk"></i> Packaging</span><span><i class="fa-solid fa-asterisk"></i> Motion</span><span><i class="fa-solid fa-asterisk"></i> Social campaigns</span><span><i class="fa-solid fa-asterisk"></i> Strategy</span>
+    <span><i class="fa-solid fa-asterisk"></i> Brand identity</span><span><i class="fa-solid fa-asterisk"></i> Web design</span><span><i class="fa-solid fa-asterisk"></i> Packaging</span><span><i class="fa-solid fa-asterisk"></i> Motion</span><span><i class="fa-solid fa-asterisk"></i> Social campaigns</span><span><i class="fa-solid fa-asterisk"></i> Strategy</span>
+  </div>
+  <div class="track rev outline"><span><i class="fa-solid fa-asterisk"></i> Think bold</span><span><i class="fa-solid fa-asterisk"></i> Design louder</span><span><i class="fa-solid fa-asterisk"></i> Launch fearless</span><span><i class="fa-solid fa-asterisk"></i> Think bold</span><span><i class="fa-solid fa-asterisk"></i> Design louder</span><span><i class="fa-solid fa-asterisk"></i> Launch fearless</span><span><i class="fa-solid fa-asterisk"></i> Think bold</span><span><i class="fa-solid fa-asterisk"></i> Design louder</span><span><i class="fa-solid fa-asterisk"></i> Launch fearless</span><span><i class="fa-solid fa-asterisk"></i> Think bold</span><span><i class="fa-solid fa-asterisk"></i> Design louder</span><span><i class="fa-solid fa-asterisk"></i> Launch fearless</span></div>
+</section>
+
+<!-- 3 ABOUT -->
+<section class="sec about" id="about">
+  <div class="about-imgs">
+    <figure class="reveal big"><img src="Assest/bs4.webp" alt="Stackly team working together" loading="lazy"></figure>
+    <figure class="reveal small" data-speed="-60"><img src="Assest/bs5.webp" alt="Studio office" loading="lazy"></figure>
+    <div class="est" data-aos="zoom-in"><b data-count="12">0</b><span>years crafting brands</span></div>
+  </div>
+  <div class="about-copy">
+    <p class="tag">About Stackly</p>
+    <h2>A small studio with a big appetite for bold ideas.</h2>
+    <p>We are strategists, designers and developers who sit in one room. That keeps ideas sharp, feedback fast and the final brand consistent from logo to launch.</p>
+    <ul class="ticks">
+      <li data-aos="fade-left"><i class="fa-solid fa-circle-check"></i> Research-led positioning</li>
+      <li data-aos="fade-left" data-aos-delay="100"><i class="fa-solid fa-circle-check"></i> Design systems that scale</li>
+      <li data-aos="fade-left" data-aos-delay="200"><i class="fa-solid fa-circle-check"></i> Launch support after delivery</li>
+    </ul>
+    <a href="404.html" class="btn"><i class="fa-solid fa-arrow-right"></i> Meet the studio</a>
+  </div>
+</section>
+
+<!-- 4 SERVICES -->
+<section class="sec services" id="services">
+  <div class="head"><p class="tag">Services</p><h2>What we do best</h2></div>
+  <div class="rows">
+    <a href="404.html" class="row" data-peek="Assest/bs6.webp"><i class="fa-solid fa-gem"></i><h3>Brand identity</h3><p>Logos, palettes, type and guidelines.</p><img src="Assest/bs6.webp" class="thumb" alt="Brand identity work" loading="lazy"><span class="go"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
+    <a href="404.html" class="row" data-peek="Assest/bs7.webp"><i class="fa-solid fa-laptop-code"></i><h3>Web design</h3><p>Fast, animated, conversion-minded sites.</p><img src="Assest/bs7.webp" class="thumb" alt="Web design on laptop" loading="lazy"><span class="go"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
+    <a href="404.html" class="row" data-peek="Assest/bs8.webp"><i class="fa-solid fa-hashtag"></i><h3>Social campaigns</h3><p>Content engines that keep brands in feed.</p><img src="Assest/bs8.webp" class="thumb" alt="Social media campaign" loading="lazy"><span class="go"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
+    <a href="404.html" class="row" data-peek="Assest/bs9.webp"><i class="fa-solid fa-box-open"></i><h3>Packaging</h3><p>Shelf-ready design that feels premium.</p><img src="Assest/bs9.webp" class="thumb" alt="Packaging design" loading="lazy"><span class="go"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
+    <a href="404.html" class="row" data-peek="Assest/bs10.webp"><i class="fa-solid fa-film"></i><h3>Motion &amp; video</h3><p>Logo reveals, explainers and brand films.</p><img src="Assest/bs10.webp" class="thumb" alt="Motion design" loading="lazy"><span class="go"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
+  </div>
+  <div class="peek" aria-hidden="true"><img alt=""></div>
+</section>
+
+<!-- 5 WORK (stacked cards) -->
+<section class="work" id="work">
+  <div class="head"><p class="tag">Selected work</p><h2>Brands we've launched</h2></div>
+  <div class="stack">
+    <article class="proj p0" style="--i:0"><div class="proj-in">
+      <div class="proj-txt"><span class="cat">Identity · Packaging</span><h3>Lumen Coffee</h3><p>A warm, hand-poured identity for a specialty roaster, from logo to cup sleeves.</p><ul class="tags"><li>Logo</li><li>Packaging</li><li>Retail</li></ul><a href="404.html" class="btn btn-sm"><i class="fa-solid fa-arrow-right"></i> View case study</a></div>
+      <figure class="proj-img"><img src="Assest/bs11.webp" alt="Lumen Coffee project" loading="lazy"><span class="yr">2026</span><span class="view"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></figure>
+    </div></article>
+    <article class="proj p1" style="--i:1"><div class="proj-in">
+      <div class="proj-txt"><span class="cat">Web · Strategy</span><h3>Northwind Bank</h3><p>A calmer, faster banking site that lifted online sign-ups by 38%.</p><ul class="tags"><li>Website</li><li>UX</li><li>Strategy</li></ul><a href="404.html" class="btn btn-sm"><i class="fa-solid fa-arrow-right"></i> View case study</a></div>
+      <figure class="proj-img"><img src="Assest/bs12.webp" alt="Northwind Bank project" loading="lazy"><span class="yr">2026</span><span class="view"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></figure>
+    </div></article>
+    <article class="proj p2" style="--i:2"><div class="proj-in">
+      <div class="proj-txt"><span class="cat">Rebrand</span><h3>Atlas Studio</h3><p>A full rebrand that gave an architecture practice a confident, modern voice.</p><ul class="tags"><li>Identity</li><li>Guidelines</li><li>Signage</li></ul><a href="404.html" class="btn btn-sm"><i class="fa-solid fa-arrow-right"></i> View case study</a></div>
+      <figure class="proj-img"><img src="Assest/bs13.webp" alt="Atlas Studio project" loading="lazy"><span class="yr">2025</span><span class="view"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></figure>
+    </div></article>
+    <article class="proj p3" style="--i:3"><div class="proj-in">
+      <div class="proj-txt"><span class="cat">Campaign · Motion</span><h3>Pulse Fitness</h3><p>A launch campaign with bold motion that filled the first three classes.</p><ul class="tags"><li>Campaign</li><li>Motion</li><li>Social</li></ul><a href="404.html" class="btn btn-sm"><i class="fa-solid fa-arrow-right"></i> View case study</a></div>
+      <figure class="proj-img"><img src="Assest/bs14.webp" alt="Pulse Fitness project" loading="lazy"><span class="yr">2025</span><span class="view"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></figure>
+    </div></article>
+    <article class="proj p4" style="--i:4"><div class="proj-in">
+      <div class="proj-txt"><span class="cat">Web · Identity</span><h3>Orbit SaaS</h3><p>A product-led identity and marketing site for a fast-growing software team.</p><ul class="tags"><li>Website</li><li>Identity</li><li>Product</li></ul><a href="404.html" class="btn btn-sm"><i class="fa-solid fa-arrow-right"></i> View case study</a></div>
+      <figure class="proj-img"><img src="Assest/bs15.webp" alt="Orbit SaaS project" loading="lazy"><span class="yr">2024</span><span class="view"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></figure>
+    </div></article>
+  </div>
+</section>
+
+<!-- 6 PROCESS -->
+<section class="sec process" id="process">
+  <div class="head"><p class="tag">How we work</p><h2>From first call to launch day</h2></div>
+  <div class="steps"><div class="line"><i></i></div>
+    <div class="step" data-aos="fade-up"><i class="fa-solid fa-magnifying-glass"></i><h3>Discover</h3><p>Workshops, audits and audience research.</p><img src="Assest/bs16.webp" alt="Discovery workshop" loading="lazy"></div>
+    <div class="step" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-lightbulb"></i><h3>Define</h3><p>Positioning, voice and creative direction.</p><img src="Assest/bs17.webp" alt="Strategy session" loading="lazy"></div>
+    <div class="step" data-aos="fade-up" data-aos-delay="200"><i class="fa-solid fa-pen-ruler"></i><h3>Design</h3><p>Concepts, refinement and the full system.</p><img src="Assest/bs1.webp" alt="Design stage" loading="lazy"></div>
+    <div class="step" data-aos="fade-up" data-aos-delay="300"><i class="fa-solid fa-rocket"></i><h3>Launch</h3><p>Build, ship and measure what happens next.</p><img src="Assest/bs18.webp" alt="Launch day" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- 7 STATS -->
+<section class="stats">
+  <img src="Assest/bs19.webp" class="bg" alt="" loading="lazy">
+  <div class="stat-grid">
+    <div data-aos="zoom-in"><i class="fa-solid fa-briefcase"></i><b data-count="280">0</b><span>Projects delivered</span></div>
+    <div data-aos="zoom-in" data-aos-delay="100"><i class="fa-solid fa-face-smile"></i><b data-count="140">0</b><span>Happy clients</span></div>
+    <div data-aos="zoom-in" data-aos-delay="200"><i class="fa-solid fa-trophy"></i><b data-count="36">0</b><span>Design awards</span></div>
+    <div data-aos="zoom-in" data-aos-delay="300"><i class="fa-solid fa-earth-americas"></i><b data-count="18">0</b><span>Countries served</span></div>
+  </div>
+</section>
+
+<!-- 8 TEAM -->
+<section class="sec team" id="team">
+  <div class="head"><p class="tag">The team</p><h2>People behind the pixels</h2></div>
+  <div class="team-grid">
+    <article class="member" data-aos="fade-up"><img src="Assest/bs20.webp" alt="Maya Rao, Creative Director" loading="lazy"><div class="info"><h3>Maya Rao</h3><span>Creative Director</span><p><a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="404.html" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a></p></div></article>
+    <article class="member" data-aos="fade-up" data-aos-delay="100"><img src="Assest/bs21.webp" alt="Arjun Mehta, Strategy Lead" loading="lazy"><div class="info"><h3>Arjun Mehta</h3><span>Strategy Lead</span><p><a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="404.html" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></p></div></article>
+    <article class="member" data-aos="fade-up" data-aos-delay="200"><img src="Assest/bs22.webp" alt="Sara Khan, Motion Designer" loading="lazy"><div class="info"><h3>Sara Khan</h3><span>Motion Designer</span><p><a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="404.html" aria-label="Behance"><i class="fa-brands fa-behance"></i></a></p></div></article>
+    <article class="member" data-aos="fade-up" data-aos-delay="300"><img src="Assest/bs23.webp" alt="Dev Patel, Lead Developer" loading="lazy"><div class="info"><h3>Dev Patel</h3><span>Lead Developer</span><p><a href="404.html" aria-label="GitHub"><i class="fa-brands fa-github"></i></a><a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></p></div></article>
+  </div>
+</section>
+
+<!-- 9 TESTIMONIALS -->
+<section class="sec testi" id="testimonials">
+  <div class="head"><p class="tag">Kind words</p><h2>Clients who came back for more</h2></div>
+  <div class="t-wrap" id="slider">
+    <div class="deck" id="deck">
+      <figure class="tcard"><img src="Assest/bs24.webp" alt="Nina Verma" loading="lazy"><figcaption><b>Nina Verma</b><span>Founder, Lumen Coffee</span></figcaption></figure><figure class="tcard"><img src="Assest/bs25.webp" alt="Tom Becker" loading="lazy"><figcaption><b>Tom Becker</b><span>CMO, Orbit SaaS</span></figcaption></figure><figure class="tcard"><img src="Assest/bs22.webp" alt="Priya Nair" loading="lazy"><figcaption><b>Priya Nair</b><span>COO, Atlas Studio</span></figcaption></figure><figure class="tcard"><img src="Assest/bs21.webp" alt="Karan Shah" loading="lazy"><figcaption><b>Karan Shah</b><span>Founder, Pulse Fitness</span></figcaption></figure>
+      <div class="rate"><i class="fa-solid fa-star"></i><div><b>4.9 / 5</b><span>from 140+ clients</span></div></div>
+    </div>
+    <div class="t-body">
+      <i class="fa-solid fa-quote-left qm"></i>
+      <div class="slides"><blockquote class="slide on"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>Stackly gave our coffee brand a voice. Every cup, sleeve and shelf now feels like us, and customers noticed straight away.</p><div class="res"><b>+33%</b><span>coffee sales in the first quarter</span></div><div class="who"><i class="fa-solid fa-circle-check"></i><div><b>Nina Verma</b><span>Founder, Lumen Coffee</span></div></div></blockquote><blockquote class="slide"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>They moved faster than our in-house team, and the new site feels unmistakably ours.</p><div class="res"><b>6 weeks</b><span>from kickoff to a live new website</span></div><div class="who"><i class="fa-solid fa-circle-check"></i><div><b>Tom Becker</b><span>CMO, Orbit SaaS</span></div></div></blockquote><blockquote class="slide"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>Clear process, no surprises, and a rebrand our whole company is proud to wear.</p><div class="res"><b>92%</b><span>of staff using the new brand in a month</span></div><div class="who"><i class="fa-solid fa-circle-check"></i><div><b>Priya Nair</b><span>COO, Atlas Studio</span></div></div></blockquote><blockquote class="slide"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>The launch campaign filled our first three classes before we even opened the doors.</p><div class="res"><b>3 of 3</b><span>opening classes sold out in launch week</span></div><div class="who"><i class="fa-solid fa-circle-check"></i><div><b>Karan Shah</b><span>Founder, Pulse Fitness</span></div></div></blockquote></div>
+      <div class="ctrl"><button id="prev" aria-label="Previous"><i class="fa-solid fa-arrow-left"></i></button><div class="dots"></div><button id="next" aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button><span class="drag"><i class="fa-solid fa-hand"></i> Drag the photos</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 BLOG -->
+<section class="sec blog" id="blog">
+  <div class="head"><p class="tag">Journal</p><h2>Notes from the studio</h2></div>
+  <div class="blog-grid">
+    <article class="post" data-aos="fade-up"><div class="ph"><img src="Assest/bs6.webp" alt="Colour palette on paper" loading="lazy"></div><span><i class="fa-regular fa-calendar"></i> Oct 12, 2026</span><h3>Why three colours beat ten in a brand system</h3><a href="404.html">Read article <i class="fa-solid fa-arrow-right"></i></a></article>
+    <article class="post" data-aos="fade-up" data-aos-delay="100"><div class="ph"><img src="Assest/bs26.webp" alt="Developers reviewing code" loading="lazy"></div><span><i class="fa-regular fa-calendar"></i> Sep 28, 2026</span><h3>Designing for motion without slowing the page</h3><a href="404.html">Read article <i class="fa-solid fa-arrow-right"></i></a></article>
+    <article class="post" data-aos="fade-up" data-aos-delay="200"><div class="ph"><img src="Assest/bs27.webp" alt="Team planning a rebrand" loading="lazy"></div><span><i class="fa-regular fa-calendar"></i> Sep 05, 2026</span><h3>A rebrand checklist for growing companies</h3><a href="404.html">Read article <i class="fa-solid fa-arrow-right"></i></a></article>
+  </div>
+</section>
+
+<!-- 11 CONTACT -->
+<section class="sec contact" id="contact">
+  <div class="contact-card">
+    <div class="c-info">
+      <p class="tag">Contact</p>
+      <h2>Have a brand in mind? Let's talk.</h2>
+      <ul>
+        <li><i class="fa-solid fa-envelope"></i> hello@stackly.studio</li>
+        <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+        <li><i class="fa-solid fa-location-dot"></i> 12 Design Lane, Chennai, India</li>
+      </ul>
+      <img src="Assest/bs17.webp" alt="Meeting at the Stackly studio" loading="lazy">
+    </div>
+    <form class="c-form" id="form">
+      <label>Name<input type="text" required placeholder="Your name"></label>
+      <label>Email<input type="email" required placeholder="you@company.com"></label>
+      <label>Project<select><option>Brand identity</option><option>Website</option><option>Campaign</option><option>Something else</option></select></label>
+      <label>Message<textarea rows="4" required placeholder="Tell us about your project"></textarea></label>
+      <button class="btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Send message</button>
+      <p class="ok" id="ok"><i class="fa-solid fa-circle-check"></i> Thanks! We'll reply within one working day.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="f-top">
+    <div><a href="index.html" class="f-logo" aria-label="Stackly home"><img src="Assest/stackly-logo.webp" alt="Stackly" width="150" height="40"></a><p>A branding studio building identities that last.</p>
+      <div class="social"><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a><a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div></div>
+    <div><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="404.html">Services</a><a href="404.html">Blog</a><a href="contact.html">Contact</a></div>
+    <div><h4>Studio</h4><a href="404.html">Work</a><a href="404.html">Process</a><a href="404.html">Team</a><a href="404.html">Clients</a></div>
+    <div class="news"><h4>Stay in the loop</h4><p>Monthly design notes. No spam.</p>
+      <form class="nl" id="nl"><input type="email" required placeholder="Your email" aria-label="Email address"><button aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button></form>
+      <span class="nlok" id="nlok"><i class="fa-solid fa-circle-check"></i> You're on the list!</span>
+      <ul class="f-contact"><li><i class="fa-solid fa-envelope"></i> hello@stackly.studio</li><li><i class="fa-solid fa-phone"></i> +91 98765 43210</li><li><i class="fa-solid fa-location-dot"></i> Chennai, India</li></ul></div>
+  </div>
+  <div class="bigword" aria-hidden="true">STACKLY</div>
+  <p class="copy">© 2026 Stackly Branding Studio. All rights reserved.</p>
+</footer>
+<button class="top" id="top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

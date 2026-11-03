@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page not found (404) — Stackly</title>
+<meta name="description" content="This page could not be found. Go back to the previous page or return to the Stackly home page.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="404.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){document.documentElement.classList.add("go")},1500);</script>
+</head>
+<body>
+
+<div class="nf-bg" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="nf-stars" id="stars" aria-hidden="true"></div>
+<div class="nf-shapes" aria-hidden="true">
+  <span class="sh s1" style="--d:.9"><i class="fa-solid fa-compass"></i></span>
+  <span class="sh s2" style="--d:-.6"><i class="fa-solid fa-map-location-dot"></i></span>
+  <span class="sh s3" style="--d:1.3"><i class="fa-solid fa-link-slash"></i></span>
+  <span class="sh s4" style="--d:-1.1"><i class="fa-solid fa-signs-post"></i></span>
+  <span class="sh s5" style="--d:.5"><i class="fa-solid fa-magnifying-glass"></i></span>
+</div>
+
+<a class="nf-brand" href="index.html" aria-label="Stackly home"><img src="Assest/stackly-logo.webp" alt="Stackly" width="150" height="40"></a>
+
+<main class="nf">
+  <p class="nf-eyebrow"><i class="fa-solid fa-triangle-exclamation"></i> Error 404</p>
+
+  <h1 class="nf-code" aria-label="404">
+    <span class="g g1" aria-hidden="true">4</span>
+    <span class="ring" aria-hidden="true"><span class="eye"><i class="pupil" id="pupil"></i><i class="lid" id="lid"></i></span></span>
+    <span class="g g2" aria-hidden="true">4</span>
+  </h1>
+
+  <h2 class="nf-title">Oops, this page took a wrong turn.</h2>
+  <p class="nf-text">We looked everywhere but could not find <code id="path" class="nf-path">this page</code>. It may have moved, been renamed, or never existed.</p>
+
+  <div class="nf-actions">
+    <a href="index.html" class="btn btn-solid" id="homeBtn"><i class="fa-solid fa-house"></i> Back to home</a>
+    <a href="index.html" class="btn btn-ghost" id="prevBtn"><i class="fa-solid fa-arrow-left"></i> <span>Back to previous page</span></a>
+  </div>
+  <p class="nf-prev" id="prevNote" hidden></p>
+
+  <nav class="nf-links" aria-label="Helpful pages">
+    <span>Or try:</span>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</main>
+
+<p class="nf-foot">© 2026 Stackly Branding Studio</p>
+
+<script src="404.js"></script>
+</body>
+</html>

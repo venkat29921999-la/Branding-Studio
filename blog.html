@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Journal — Stackly Branding Studio</title>
+<meta name="description" content="The Stackly Journal: notes from a branding studio on colour, motion, web design, packaging and strategy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-blog">
+<div class="loader" aria-hidden="true"><img src="Assest/stackly-logo.webp" alt=""><div class="lbar"><i></i></div></div>
+<div class="cursor" aria-hidden="true"></div>
+
+<!-- HEADER (same as home and about) -->
+<header class="header" id="header">
+  <a href="index.html" class="brand" aria-label="Stackly home"><img src="Assest/stackly-logo.webp" alt="Stackly" width="150" height="40"></a>
+  <nav class="nav" id="nav" aria-label="Main">
+    <span class="ind" aria-hidden="true"></span>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html" class="active" aria-current="page">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html" class="btn btn-sm nav-login"><i class="fa-solid fa-user"></i> Login</a>
+  </nav>
+  <a href="login.html" class="btn btn-sm login"><i class="fa-solid fa-user"></i> Login</a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="progress"></div>
+</header>
+
+<main>
+<!-- 1 HERO: the word is filled with a photo and ripples like liquid -->
+<section class="bl-hero" id="blog-top">
+  <svg class="bl-defs" width="0" height="0" aria-hidden="true" focusable="false">
+    <filter id="blLiquid" x="-6%" y="-25%" width="112%" height="150%" color-interpolation-filters="sRGB">
+      <feTurbulence id="blTurb" type="fractalNoise" baseFrequency="0.006 0.018" numOctaves="2" seed="7" result="noise"/>
+      <feDisplacementMap id="blDisp" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+  <p class="crumb"><a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Blog</span></p>
+  <h1 class="bl-title"><span class="bl-kicker">The Stackly</span><span class="bl-word" id="blWord">Journal</span></h1>
+  <div class="bl-foot">
+    <div>
+      <p class="bl-sub">Notes from the studio on colour, motion and the small decisions that make a brand feel real.</p>
+      <div class="bl-facts"><span><i class="fa-regular fa-newspaper"></i> 10 stories</span><span><i class="fa-regular fa-clock"></i> New every fortnight</span></div>
+    </div>
+    <nav class="bl-jump" aria-label="Jump to a topic">
+      <p>Jump to a topic</p>
+      <div><a href="404.html" data-topic="all">All stories</a><a href="404.html" data-topic="brand">Brand</a><a href="404.html" data-topic="motion">Motion</a><a href="404.html" data-topic="web">Web</a><a href="404.html" data-topic="packaging">Packaging</a><a href="404.html" data-topic="strategy">Strategy</a></div>
+    </nav>
+  </div>
+</section>
+
+<!-- 2 FEATURED: a book cover swings open as you scroll -->
+<section class="bl-feat" id="featured" aria-label="Featured essay">
+  <div class="bl-feat-stick">
+    <div class="bl-book" id="blBook">
+      <div class="bl-rpage">
+        <figure><img src="Assest/bs2.webp" alt="Branding mockup on a desk" loading="lazy"></figure>
+        <div class="bl-ftxt">
+          <div class="bl-fmeta"><span><i class="fa-solid fa-palette"></i>Brand</span><span><i class="fa-regular fa-calendar"></i>Oct 12, 2026</span><span><i class="fa-regular fa-clock"></i>6 min read</span></div>
+          <h2 class="nosplit">Why three colours beat ten in a brand system</h2>
+          <p>A palette people can remember is a palette people use. Here is how we pick one anchor, one partner and one spark, and why everything else can wait.</p>
+          <a href="404.html" class="btn btn-sm"><i class="fa-solid fa-arrow-right"></i> Read the essay</a>
+        </div>
+        <i class="bl-shade" aria-hidden="true"></i>
+      </div>
+      <div class="bl-cover">
+        <div class="bl-cf">
+          <div class="bl-cf-top"><span>Stackly Journal</span><b>Issue 12</b></div>
+          <div class="bl-arch"><img src="Assest/bs6.webp" alt="Colour palette on paper" loading="lazy"></div>
+          <p class="bl-cf-title">The colour issue</p>
+          <p class="bl-cf-sub">Autumn 2026</p>
+        </div>
+        <div class="bl-cb">
+          <div class="bl-lpage">
+            <p class="tag">In this essay</p>
+            <ul class="bl-points">
+              <li><i class="fa-solid fa-circle-check"></i> Pick one anchor colour before anything else</li>
+              <li><i class="fa-solid fa-circle-check"></i> Give the second colour a clear job</li>
+              <li><i class="fa-solid fa-circle-check"></i> Save the third for the moment that matters</li>
+            </ul>
+            <div class="bl-readring"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="bg" cx="60" cy="60" r="52"/><circle class="fg" cx="60" cy="60" r="52"/></svg><b>6</b><span>min read</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="bl-hint"><i class="fa-solid fa-arrow-down"></i> Keep scrolling to open the issue</p>
+  </div>
+</section>
+
+<!-- 3 TOPICS: pick a chip and the cards reshuffle into their new places -->
+<section class="sec bl-topics" id="topics">
+  <div class="head"><p class="tag">All stories</p><h2>Pick a topic and the page reshuffles</h2></div>
+  <div class="bl-filter" role="group" aria-label="Filter stories by topic">
+    <button class="bl-f-btn on" data-cat="all" aria-pressed="true">All <b>0</b></button>
+    <button class="bl-f-btn" data-cat="brand" aria-pressed="false">Brand <b>0</b></button>
+    <button class="bl-f-btn" data-cat="motion" aria-pressed="false">Motion <b>0</b></button>
+    <button class="bl-f-btn" data-cat="web" aria-pressed="false">Web <b>0</b></button>
+    <button class="bl-f-btn" data-cat="packaging" aria-pressed="false">Packaging <b>0</b></button>
+    <button class="bl-f-btn" data-cat="strategy" aria-pressed="false">Strategy <b>0</b></button>
+  </div>
+  <p class="bl-count" aria-live="polite"><b id="blCount">9</b> stories shown</p>
+  <div class="bl-grid" id="blGrid">
+      <article class="bl-card" data-cat="motion">
+        <div class="bl-ph"><img src="Assest/bs26.webp" alt="Developers reviewing code" loading="lazy"></div>
+        <div class="bl-cmeta"><span class="bl-pill">Motion</span><span><i class="fa-regular fa-calendar"></i>Sep 28, 2026</span><span><i class="fa-regular fa-clock"></i>5 min</span></div>
+        <h3><a href="404.html">Designing for motion without slowing the page</a></h3>
+        <p>Where animation earns its weight, and where a still frame does the job.</p>
+      </article>
+      <article class="bl-card" data-cat="strategy">
+        <div class="bl-ph"><img src="Assest/bs27.webp" alt="Team planning a rebrand" loading="lazy"></div>
+        <div class="bl-cmeta"><span class="bl-pill">Strategy</span><span><i class="fa-regular fa-calendar"></i>Sep 05, 2026</span><span><i class="fa-regular fa-clock"></i>7 min</span></div>
+        <h3><a href="404.html">A rebrand checklist for growing companies</a></h3>
+        <p>Twelve questions to answer before you commission a single logo.</p>
+      </article>
+      <article class="bl-card" data-cat="packaging">
+        <div class="bl-ph"><img src="Assest/bs9.webp" alt="Packaging design" loading="lazy"></div>
+        <div class="bl-cmeta"><span class="bl-pill">Packaging</span><span><i class="fa-regular fa-calendar"></i>Aug 21, 2026</span><span><i class="fa-regular fa-clock"></i>4 min</span></div>
+        <h3><a href="404.html">What a premium box says before it opens</a></h3>
+        <p>Weight, texture and the first three seconds on a shelf.</p>
+      </article>
+      <article class="bl-card" data-cat="web">
+        <div class="bl-ph"><img src="Assest/bs7.webp" alt="Web design on laptop" loading="lazy"></div>
+        <div class="bl-cmeta"><span class="bl-pill">Web</span><span><i class="fa-regular fa-calendar"></i>Aug 08, 2026</span><span><i class="fa-regular fa-clock"></i>5 min</span></div>
+        <h3><a href="404.html">Five website details clients notice without knowing why</a></h3>
+        <p>Spacing, easing and the other small things that make a site feel finished.</p>
+      </article>
+      <article class="bl-card" data-cat="brand">
+        <div class="bl-ph"><img src="Assest/bs1.webp" alt="Designer sketching a brand identity" loading="lazy"></div>
+        <div class="bl-cmeta"><span class="bl-pill">Brand</span><span><i class="fa-regular fa-calendar"></i>Jul 24, 2026</span><span><i class="fa-regular fa-clock"></i>6 min</span></div>
+        <h3><a href="404.html">Logo first or voice first?</a></h3>
+        <p>How we order a brand brief so the two never fight each other.</p>
+      </article>
+      <article class="bl-card" data-cat="motion">
+        <div class="bl-ph"><img src="Assest/bs10.webp" alt="Motion design" loading="lazy"></div>
+        <div class="bl-cmeta"><span class="bl-pill">Motion</span><span><i class="fa-regular fa-calendar"></i>Jul 09, 2026</span><span><i class="fa-regular fa-clock"></i>3 min</span></div>
+        <h3><a href="404.html">The 200 millisecond rule for logo reveals</a></h3>
+        <p>Why short beats clever when a mark appears on screen.</p>
+      </article>
+      <article class="bl-card" data-cat="brand">
+        <div class="bl-ph"><img src="Assest/bs3.webp" alt="Creative workspace" loading="lazy"></div>
+        <div class="bl-cmeta"><span class="bl-pill">Brand</span><span><i class="fa-regular fa-calendar"></i>Jun 26, 2026</span><span><i class="fa-regular fa-clock"></i>5 min</span></div>
+        <h3><a href="404.html">Pairing two typefaces without overthinking it</a></h3>
+        <p>One for headlines, one for reading, and a simple test to check they get along.</p>
+      </article>
+      <article class="bl-card" data-cat="web">
+        <div class="bl-ph"><img src="Assest/bs18.webp" alt="Launch day" loading="lazy"></div>
+        <div class="bl-cmeta"><span class="bl-pill">Web</span><span><i class="fa-regular fa-calendar"></i>Jun 12, 2026</span><span><i class="fa-regular fa-clock"></i>4 min</span></div>
+        <h3><a href="404.html">What a launch-week site really needs</a></h3>
+        <p>The pages to ship now, and the ones that can wait a month.</p>
+      </article>
+      <article class="bl-card" data-cat="packaging">
+        <div class="bl-ph"><img src="Assest/bs11.webp" alt="Lumen Coffee project" loading="lazy"></div>
+        <div class="bl-cmeta"><span class="bl-pill">Packaging</span><span><i class="fa-regular fa-calendar"></i>May 29, 2026</span><span><i class="fa-regular fa-clock"></i>4 min</span></div>
+        <h3><a href="404.html">Unboxing is a story in three beats</a></h3>
+        <p>Open, reveal, keep: how a coffee brand turned a box into a ritual.</p>
+      </article>
+  </div>
+</section>
+
+<!-- 4 EDITOR'S PICKS: a blob that never stops morphing, photo opens like an iris -->
+<section class="sec bl-picks" id="picks">
+  <div class="head"><p class="tag">Editor's picks</p><h2>Three reads we would send a friend</h2></div>
+  <div class="bl-pk-wrap">
+    <div class="bl-blobwrap">
+      <div class="bl-orbit" aria-hidden="true"><i></i><i></i></div>
+      <div class="bl-blob" id="blBlob">
+        <img src="Assest/bs2.webp" alt="Branding mockup on a desk" loading="lazy">
+        <img src="Assest/bs5.webp" alt="Studio office" loading="lazy">
+        <img src="Assest/bs16.webp" alt="Discovery workshop" loading="lazy">
+      </div>
+    </div>
+    <ul class="bl-pk-list" id="blPicks">
+        <li class="bl-pick on" tabindex="0"><div class="bl-pk-ic"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="bg" cx="27" cy="27" r="24"/><circle class="fg" cx="27" cy="27" r="24"/></svg><i class="fa-solid fa-book-open"></i></div><div><h3>Inside a brand sprint: five days, one identity</h3><div class="bl-more"><div><p>A day-by-day look at how a blank page becomes a full brand system in a single week.</p><a href="404.html">Read the story <i class="fa-solid fa-arrow-right"></i></a></div></div></div></li>
+        <li class="bl-pick" tabindex="0"><div class="bl-pk-ic"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="bg" cx="27" cy="27" r="24"/><circle class="fg" cx="27" cy="27" r="24"/></svg><i class="fa-solid fa-bookmark"></i></div><div><h3>The studio reading list, autumn edition</h3><div class="bl-more"><div><p>Eleven books and essays that changed how we brief, sketch and critique.</p><a href="404.html">Read the story <i class="fa-solid fa-arrow-right"></i></a></div></div></div></li>
+        <li class="bl-pick" tabindex="0"><div class="bl-pk-ic"><svg viewBox="0 0 54 54" aria-hidden="true"><circle class="bg" cx="27" cy="27" r="24"/><circle class="fg" cx="27" cy="27" r="24"/></svg><i class="fa-solid fa-magnifying-glass"></i></div><div><h3>How we test a logo before the client sees it</h3><div class="bl-more"><div><p>Tiny sizes, dark backgrounds and the squint test: our three-step stress check.</p><a href="404.html">Read the story <i class="fa-solid fa-arrow-right"></i></a></div></div></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 5 SERIES: a 3D shelf that spins, drags and steps card by card -->
+<section class="sec bl-series" id="series">
+  <div class="head"><p class="tag">Series</p><h2>Six series on one turning shelf</h2></div>
+  <div class="bl-shelf" id="blShelf">
+    <div class="bl-stage3d" id="blStage"><div class="bl-ring" id="blRing">
+        <article class="bl-sc" style="--i:0" data-title="Colour school" data-txt="How to choose, test and defend a palette, one small lesson at a time."><img src="Assest/bs6.webp" alt="Colour palette on paper" loading="lazy"><div><h3>Colour school</h3><span>4 stories</span></div></article>
+        <article class="bl-sc" style="--i:1" data-title="Motion notes" data-txt="Easing, timing and restraint for logo reveals and interfaces."><img src="Assest/bs10.webp" alt="Motion design" loading="lazy"><div><h3>Motion notes</h3><span>5 stories</span></div></article>
+        <article class="bl-sc" style="--i:2" data-title="Type pairings" data-txt="Two typefaces, one clear job each. Simple rules that keep pairs friendly."><img src="Assest/bs3.webp" alt="Creative workspace" loading="lazy"><div><h3>Type pairings</h3><span>3 stories</span></div></article>
+        <article class="bl-sc" style="--i:3" data-title="Packaging stories" data-txt="From the first shelf glance to the last peel of tissue paper."><img src="Assest/bs9.webp" alt="Packaging design" loading="lazy"><div><h3>Packaging stories</h3><span>4 stories</span></div></article>
+        <article class="bl-sc" style="--i:4" data-title="Launch diaries" data-txt="Real timelines from the week a brand went live, wobbles included."><img src="Assest/bs18.webp" alt="Launch day" loading="lazy"><div><h3>Launch diaries</h3><span>6 stories</span></div></article>
+        <article class="bl-sc" style="--i:5" data-title="Brief to brand" data-txt="How a blank page turns into a system, step by step."><img src="Assest/bs1.webp" alt="Designer sketching a brand identity" loading="lazy"><div><h3>Brief to brand</h3><span>5 stories</span></div></article>
+    </div></div>
+    <div class="bl-shelf-info" aria-live="polite">
+      <button id="blSPrev" aria-label="Previous series"><i class="fa-solid fa-arrow-left"></i></button>
+      <div><h3 class="bl-s-title" id="blSTitle"></h3><p class="bl-s-txt" id="blSTxt"></p><a href="404.html">Browse this series <i class="fa-solid fa-arrow-right"></i></a></div>
+      <button id="blSNext" aria-label="Next series"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+    <p class="bl-drag"><i class="fa-solid fa-hand"></i> Drag the shelf to spin it</p>
+  </div>
+</section>
+
+<!-- 6 POCKET NOTES: they drop from the ceiling, land, and keep swaying -->
+<section class="sec bl-notes" id="notes">
+  <div class="head"><p class="tag">Pocket notes</p><h2>Six small rules pinned above our desks</h2></div>
+  <div class="bl-board" id="blBoard">
+      <article class="bl-note"><span class="bl-pin" aria-hidden="true"></span><div class="bl-note-in"><div class="bl-nimg"><img src="Assest/bs13.webp" alt="Atlas Studio project" loading="lazy"></div><h3>Test it at 24 pixels.</h3><p>If the logo falls apart on a browser tab, it is not finished yet.</p><span class="bl-nfoot">Brand · 1 min</span></div></article>
+      <article class="bl-note"><span class="bl-pin" aria-hidden="true"></span><div class="bl-note-in"><div class="bl-nimg"><img src="Assest/bs12.webp" alt="Northwind Bank project" loading="lazy"></div><h3>Name the one job of the page.</h3><p>A page that tries to do three things usually does none of them well.</p><span class="bl-nfoot">Web · 1 min</span></div></article>
+      <article class="bl-note"><span class="bl-pin" aria-hidden="true"></span><div class="bl-note-in"><div class="bl-nimg"><img src="Assest/bs15.webp" alt="Orbit SaaS project" loading="lazy"></div><h3>Ease out, never linear.</h3><p>Things that arrive should slow down at the end, the way real objects do.</p><span class="bl-nfoot">Motion · 1 min</span></div></article>
+      <article class="bl-note"><span class="bl-pin" aria-hidden="true"></span><div class="bl-note-in"><div class="bl-nimg"><img src="Assest/bs8.webp" alt="Social media campaign" loading="lazy"></div><h3>Write the button first.</h3><p>The action label tells you what the screen is really for.</p><span class="bl-nfoot">Web · 1 min</span></div></article>
+      <article class="bl-note"><span class="bl-pin" aria-hidden="true"></span><div class="bl-note-in"><div class="bl-nimg"><img src="Assest/bs17.webp" alt="Strategy session" loading="lazy"></div><h3>Shoot packaging in daylight.</h3><p>Window light shows the true colour before the printer does.</p><span class="bl-nfoot">Packaging · 1 min</span></div></article>
+      <article class="bl-note"><span class="bl-pin" aria-hidden="true"></span><div class="bl-note-in"><div class="bl-nimg"><img src="Assest/bs4.webp" alt="Stackly team working together" loading="lazy"></div><h3>Keep one spare idea.</h3><p>Hold back a concept for round two. It is often the one they pick.</p><span class="bl-nfoot">Strategy · 1 min</span></div></article>
+  </div>
+</section>
+
+<!-- 7 SIGN-UP: the envelope opens and the letter rises out -->
+<section class="sec bl-mail" id="subscribe">
+  <div class="bl-mail-grid">
+    <div class="bl-mail-copy">
+      <p class="tag">The Journal letter</p>
+      <h2>Get every story before it goes online</h2>
+      <p>One short email every fortnight with the newest story, a pocket note and a link worth saving. Choose the topics you care about.</p>
+      <ul class="bl-perks"><li><i class="fa-solid fa-circle-check"></i> One email every two weeks</li><li><i class="fa-solid fa-circle-check"></i> Only the topics you pick</li><li><i class="fa-solid fa-circle-check"></i> Leave with one click</li></ul>
+    </div>
+    <div class="bl-env-wrap" id="blEnvWrap">
+      <div class="bl-env" id="blEnv">
+        <div class="bl-env-back"></div>
+        <div class="bl-slot">
+          <form class="bl-letter" id="blNews">
+            <div class="bl-l-img"><img src="Assest/bs6.webp" alt="Colour palette on paper" loading="lazy"></div>
+            <h3>Join the reading list</h3>
+            <div class="bl-opts" role="group" aria-label="Topics">
+              <label class="bl-opt"><input type="checkbox" value="brand" checked><span>Brand</span></label>
+              <label class="bl-opt"><input type="checkbox" value="motion"><span>Motion</span></label>
+              <label class="bl-opt"><input type="checkbox" value="web"><span>Web</span></label>
+              <label class="bl-opt"><input type="checkbox" value="packaging"><span>Packaging</span></label>
+            </div>
+            <label class="sr-only" for="blEmail">Email address</label>
+            <input type="email" id="blEmail" required placeholder="you@company.com">
+            <button class="btn btn-sm" type="submit"><i class="fa-solid fa-paper-plane"></i> Seal and send</button>
+          </form>
+        </div>
+        <div class="bl-env-front"><span class="bl-stamp"><img src="Assest/bs19.webp" alt="Stackly team around a table" loading="lazy"></span></div>
+        <div class="bl-flap" aria-hidden="true"></div>
+      </div>
+      <div class="bl-sent" id="blSent" aria-live="polite"><i class="fa-solid fa-check"></i><b>Sealed and on its way</b><span>Your first Journal letter will land in your inbox soon.</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER (same as home and about) -->
+<footer class="footer">
+  <div class="f-top">
+    <div><a href="index.html" class="f-logo" aria-label="Stackly home"><img src="Assest/stackly-logo.webp" alt="Stackly" width="150" height="40"></a><p>A branding studio building identities that last.</p>
+      <div class="social"><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a><a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div></div>
+    <div><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="404.html">Services</a><a href="404.html">Blog</a><a href="contact.html">Contact</a></div>
+    <div><h4>Studio</h4><a href="404.html">Work</a><a href="404.html">Process</a><a href="404.html">Team</a><a href="404.html">Clients</a></div>
+    <div class="news"><h4>Stay in the loop</h4><p>Monthly design notes. No spam.</p>
+      <form class="nl" id="nl"><input type="email" required placeholder="Your email" aria-label="Email address"><button aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button></form>
+      <span class="nlok" id="nlok"><i class="fa-solid fa-circle-check"></i> You're on the list!</span>
+      <ul class="f-contact"><li><i class="fa-solid fa-envelope"></i> hello@stackly.studio</li><li><i class="fa-solid fa-phone"></i> +91 98765 43210</li><li><i class="fa-solid fa-location-dot"></i> Chennai, India</li></ul></div>
+  </div>
+  <div class="bigword" aria-hidden="true">STACKLY</div>
+  <p class="copy">© 2026 Stackly Branding Studio. All rights reserved.</p>
+</footer>
+<button class="top" id="top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

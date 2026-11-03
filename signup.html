@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sign up — Stackly</title>
+<meta name="description" content="Create your Stackly admin or user account.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-auth page-signup">
+<div class="au-bg" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="au-curtain" aria-hidden="true"><i></i><i></i></div>
+<main class="au-wrap">
+  <a href="index.html" class="btn btn-ghost btn-sm au-back au-backbtn"><i class="fa-solid fa-arrow-left"></i> <span class="au-lg">Back to </span><span class="au-h">home</span></a><section class="au-show">
+    <a class="au-brand" href="index.html" aria-label="Stackly home" style="margin-bottom:1.4rem"><img src="Assest/stackly-logo.webp" alt="Stackly" width="150" height="40"></a>
+    <p class="au-eyebrow"><i class="fa-solid fa-wand-magic-sparkles"></i> Free to join, ready in a minute</p>
+    <h1 class="au-h1"><span class="w"><span>Join</span></span> <span class="w"><span>the</span></span> <span class="w"><span>studio</span></span> <em>command centre.</em></h1>
+    <p class="au-lead">Create an account to track your brand project, tick off milestones and message the team, or manage everything as an admin.</p>
+    <div class="au-stage" aria-hidden="true">
+      <div class="au-arch"><img src="Assest/bs4.webp" alt="" width="700" height="560" decoding="async"></div>
+      <div class="au-fc f1"><i class="fa-solid fa-bars-progress"></i><div><b>12 projects</b><span>moving this week</span></div></div>
+      <div class="au-fc f2"><i class="fa-solid fa-envelope"></i><div><b>3 new emails</b><span>replied in 24h</span></div></div>
+      <div class="au-fc f3"><i class="fa-solid fa-circle-check"></i><div><b>98% on time</b><span>delivery rate</span></div></div>
+      <div class="au-badge"><svg viewBox="0 0 100 100"><defs><path id="auBd" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs><text><textPath href="#auBd" textLength="236" lengthAdjust="spacing">STACKLY · DASHBOARD · SECURE · </textPath></text></svg><i class="fa-solid fa-lock"></i></div>
+    </div>
+  </section>
+  <section class="au-card" aria-labelledby="suTitle">
+    <h2 id="suTitle">Create your account</h2>
+    <p class="au-sub">It takes less than a minute. You will log in next.</p>
+    <form class="au-form" id="signupForm" novalidate>
+      <div class="au-fld"><i class="fa-solid fa-user ic" aria-hidden="true"></i><input id="suName" name="suName" type="text" placeholder=" " autocomplete="name"  required><label for="suName">Full name</label><small class="au-err">Enter your full name.</small></div>
+      <div class="au-fld"><i class="fa-solid fa-envelope ic" aria-hidden="true"></i><input id="suEmail" name="suEmail" type="email" placeholder=" " autocomplete="email" inputmode="email" required><label for="suEmail">Email address</label><small class="au-err">Enter a valid email address.</small></div>
+      <div class="au-two">
+        <div><div class="au-fld"><i class="fa-solid fa-lock ic" aria-hidden="true"></i><input id="suPass" name="suPass" type="password" placeholder=" " autocomplete="new-password"  required><label for="suPass">Password</label><button class="au-eye" type="button" aria-label="Show password" aria-pressed="false"><i class="fa-solid fa-eye"></i></button><small class="au-err">Use 8+ characters with a letter and a number.</small></div><div class="au-meter" data-s="0" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div>
+        <div class="au-fld"><i class="fa-solid fa-lock ic" aria-hidden="true"></i><input id="suPass2" name="suPass2" type="password" placeholder=" " autocomplete="new-password"  required><label for="suPass2">Confirm password</label><button class="au-eye" type="button" aria-label="Show password" aria-pressed="false"><i class="fa-solid fa-eye"></i></button><small class="au-err">Passwords do not match.</small></div>
+      </div>
+      <p class="au-meter-t" aria-live="polite" style="margin-top:-.5rem">Use 8+ characters with a number.</p>
+      <fieldset class="au-roles">
+        <legend>Create account as</legend>
+        <div class="au-rwrap">
+          <input type="radio" id="roleUser" name="role" value="user" checked><label for="roleUser"><i class="fa-solid fa-user"></i> User</label>
+          <input type="radio" id="roleAdmin" name="role" value="admin"><label for="roleAdmin"><i class="fa-solid fa-user-shield"></i> Admin</label>
+          <i class="au-pill" aria-hidden="true"></i>
+        </div>
+        <p class="au-hint" id="roleHint" aria-live="polite"></p>
+      </fieldset>
+      <label class="au-check"><input type="checkbox" id="suTerms"><span class="bx"><i class="fa-solid fa-check"></i></span><span>I agree to the <a href="404.html">terms</a> and <a href="404.html">privacy policy</a>.</span></label>
+      <div class="au-msg" id="auMsg" role="alert"></div>
+      <button class="btn au-btn" type="submit"><span class="t">Create account <i class="fa-solid fa-arrow-right"></i></span><span class="sp" aria-hidden="true"></span></button>
+    </form>
+    <p class="au-alt">Already have an account? <a href="login.html">Log in</a></p>
+    <p class="au-alt" style="margin-top:.4rem"><a href="index.html" class="au-home"><i class="fa-solid fa-arrow-left"></i> Back to home</a></p>
+    <div class="au-done" hidden><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42"/><path d="M30 52 l14 14 l27 -30"/></svg><h3 class="au-title">Account created</h3><p></p></div>
+  </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>

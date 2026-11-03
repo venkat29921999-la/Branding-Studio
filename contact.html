@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Stackly Branding Studio</title>
+<meta name="description" content="Contact Stackly: email, call, chat or visit our Salem studio. Tell us about your brand and we reply within one working day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-contact">
+<div class="loader" aria-hidden="true"><img src="Assest/stackly-logo.webp" alt=""><div class="lbar"><i></i></div></div>
+<div class="cursor" aria-hidden="true"></div>
+
+<!-- HEADER (same as the other pages) -->
+<header class="header" id="header">
+  <a href="index.html" class="brand" aria-label="Stackly home"><img src="Assest/stackly-logo.webp" alt="Stackly" width="150" height="40"></a>
+  <nav class="nav" id="nav" aria-label="Main">
+    <span class="ind" aria-hidden="true"></span>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html" class="active" aria-current="page">Contact</a>
+    <a href="login.html" class="btn btn-sm nav-login"><i class="fa-solid fa-user"></i> Login</a>
+  </nav>
+  <a href="login.html" class="btn btn-sm login"><i class="fa-solid fa-user"></i> Login</a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="progress"></div>
+</header>
+
+<main>
+
+<!-- 1 · HERO: greetings made of dots that scatter from your cursor, and a postage stamp that gets stamped -->
+<section class="ct-hero" id="ctHero">
+  <div class="ct-hero-copy">
+    <p class="ct-crumb"><a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Contact</span></p>
+    <div class="ct-say" id="ctSay">
+      <canvas id="ctCanvas" role="img" aria-label="The word hello in several languages, drawn with gold dots that scatter when you touch them"></canvas>
+    </div>
+    <h1 class="ct-h1">Say hello. A real person replies within a day.</h1>
+    <p class="lead ct-lead">Tell us about the brand you are building, or just drop in for a coffee and a chat. Every message is read by someone on the team.</p>
+    <div class="cta">
+      <a href="404.html" class="btn"><i class="fa-solid fa-paper-plane"></i> Start a project</a>
+      <a href="404.html" class="btn btn-ghost"><i class="fa-solid fa-ticket"></i> Other ways to reach us</a>
+    </div>
+    <p class="ct-hint"><i class="fa-solid fa-hand-pointer"></i> Move through the dots, tap for the next greeting</p>
+  </div>
+  <div class="ct-post" id="ctPost">
+    <i class="ct-thud" aria-hidden="true"></i>
+    <div class="ct-stamp-hold" id="ctHold">
+      <figure class="ct-stamp" id="ctStamp">
+        <img src="Assest/bs17.webp" alt="A planning meeting at the Stackly studio" width="560" height="700">
+        <span class="ct-denom">24h</span>
+        <figcaption><b>Stackly</b><span>Reply guaranteed</span></figcaption>
+      </figure>
+    </div>
+    <svg class="ct-mark" viewBox="0 0 220 120" aria-hidden="true">
+      <defs><path id="ctPmRing" d="M60,60 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
+      <circle class="mk-ring" cx="60" cy="60" r="52"/>
+      <circle class="mk-ring2" cx="60" cy="60" r="30"/>
+      <text class="mk-txt"><textPath href="#ctPmRing" textLength="236" lengthAdjust="spacing">SALEM · INDIA · HELLO · </textPath></text>
+      <path class="mk-wave" d="M114 34 q10 -9 20 0 t20 0 t20 0 t20 0 t20 0"/>
+      <path class="mk-wave" d="M114 50 q10 -9 20 0 t20 0 t20 0 t20 0 t20 0"/>
+      <path class="mk-wave" d="M114 66 q10 -9 20 0 t20 0 t20 0 t20 0 t20 0"/>
+      <path class="mk-wave" d="M114 82 q10 -9 20 0 t20 0 t20 0 t20 0 t20 0"/>
+    </svg>
+  </div>
+</section>
+
+<!-- 2 · TICKETS: printed from a slot, tear the stub to copy -->
+<section class="sec ct-sec ct-tix" id="ctTickets">
+  <div class="head"><p class="tag">Pick a channel</p><h2>Four ways to reach us. Tear off the one you like.</h2></div>
+  <div class="ct-slotbar" aria-hidden="true"><i></i></div>
+  <div class="ct-tix-grid">
+
+    <div class="ct-tk-wrap"><article class="ct-tk" data-copy="hello@stackly.studio">
+      <div class="ct-tk-main">
+        <img src="Assest/bs5.webp" alt="A bright studio desk with a laptop and notebook" loading="lazy">
+        <div class="ct-tk-body">
+          <span class="ct-tk-k"><i class="fa-solid fa-envelope"></i> Email</span>
+          <h3>hello@stackly.studio</h3>
+          <p>Best for briefs, files and long stories. We read every line.</p>
+          <a href="404.html" class="ct-tk-go">Open mail app <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <span class="ct-tk-ok" role="status"><i class="fa-solid fa-circle-check"></i> Email copied</span>
+      </div>
+      <button class="ct-stub" type="button" aria-label="Tear off the stub and copy the email address"><i class="fa-solid fa-scissors"></i><span>Tear &amp; copy</span></button>
+    </article></div>
+
+    <div class="ct-tk-wrap"><article class="ct-tk" data-copy="+91 98765 43210">
+      <div class="ct-tk-main">
+        <img src="Assest/bs16.webp" alt="Team talking through ideas at a workshop" loading="lazy">
+        <div class="ct-tk-body">
+          <span class="ct-tk-k"><i class="fa-solid fa-phone"></i> Call</span>
+          <h3>+91 98765 43210</h3>
+          <p>Monday to Saturday, 10:00 to 18:30 IST. A human picks up.</p>
+          <a href="404.html" class="ct-tk-go">Call the studio <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <span class="ct-tk-ok" role="status"><i class="fa-solid fa-circle-check"></i> Number copied</span>
+      </div>
+      <button class="ct-stub" type="button" aria-label="Tear off the stub and copy the phone number"><i class="fa-solid fa-scissors"></i><span>Tear &amp; copy</span></button>
+    </article></div>
+
+    <div class="ct-tk-wrap"><article class="ct-tk" data-copy="+91 98765 43210">
+      <div class="ct-tk-main">
+        <img src="Assest/bs8.webp" alt="Phone showing a social media feed" loading="lazy">
+        <div class="ct-tk-body">
+          <span class="ct-tk-k"><i class="fa-brands fa-whatsapp"></i> Chat</span>
+          <h3>WhatsApp us</h3>
+          <p>Quick questions, voice notes and mood boards are all welcome.</p>
+          <a href="404.html" class="ct-tk-go" target="_blank" rel="noopener">Start a chat <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <span class="ct-tk-ok" role="status"><i class="fa-solid fa-circle-check"></i> Number copied</span>
+      </div>
+      <button class="ct-stub" type="button" aria-label="Tear off the stub and copy the WhatsApp number"><i class="fa-solid fa-scissors"></i><span>Tear &amp; copy</span></button>
+    </article></div>
+
+    <div class="ct-tk-wrap"><article class="ct-tk" data-copy="12 Design Lane, Salem, Tamil Nadu, India">
+      <div class="ct-tk-main">
+        <img src="Assest/bs3.webp" alt="Creative workspace inside the studio" loading="lazy">
+        <div class="ct-tk-body">
+          <span class="ct-tk-k"><i class="fa-solid fa-location-dot"></i> Visit</span>
+          <h3>12 Design Lane, Salem</h3>
+          <p>Coffee is on us. Book a slot first so we keep the good chairs free.</p>
+          <a href="404.html" class="ct-tk-go">Get directions <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <span class="ct-tk-ok" role="status"><i class="fa-solid fa-circle-check"></i> Address copied</span>
+      </div>
+      <button class="ct-stub" type="button" aria-label="Tear off the stub and copy the studio address"><i class="fa-solid fa-scissors"></i><span>Tear &amp; copy</span></button>
+    </article></div>
+
+  </div>
+</section>
+
+<!-- 3 · FORM: four steps, a paper plane flies along the route, the photo swaps with a light-leak wipe -->
+<section class="sec ct-sec ct-formsec" id="ctForm">
+  <div class="ct-form-grid">
+    <aside class="ct-side">
+      <p class="tag">Start a project</p>
+      <h2>Tell us what you are dreaming up.</h2>
+      <p class="ct-side-p">Four quick steps. No jargon, no pressure, and no sales call you did not ask for.</p>
+      <figure class="ct-photo" id="ctPhoto">
+        <img src="Assest/bs4.webp" alt="The Stackly team working together" style="--m:130" loading="lazy">
+        <img src="Assest/bs1.webp" alt="A designer sketching a brand identity" style="--m:-30" loading="lazy">
+        <img src="Assest/bs19.webp" alt="A team planning timelines and budgets" style="--m:-30" loading="lazy">
+        <img src="Assest/bs27.webp" alt="Colleagues sharing the story behind a rebrand" style="--m:-30" loading="lazy">
+        <figcaption id="ctCap">Step 1 · Say who you are</figcaption>
+      </figure>
+    </aside>
+
+    <!-- To receive real messages: set data-endpoint to your Formspree / Basin / own API URL -->
+    <form class="ct-form" id="ctFormEl" novalidate data-endpoint="">
+      <div class="ct-track" style="--p:0" aria-hidden="true">
+        <div class="ct-line"></div><div class="ct-fill"></div>
+        <div class="ct-dots"><i class="ct-dot on"></i><i class="ct-dot"></i><i class="ct-dot"></i><i class="ct-dot"></i></div>
+        <i class="fa-solid fa-paper-plane ct-plane"></i>
+      </div>
+      <p class="ct-stepno" id="ctStepNo" aria-live="polite">Step 1 of 4</p>
+
+      <div class="ct-steps">
+        <fieldset class="ct-step on">
+          <legend>First, who are we talking to?</legend>
+          <div class="ct-fld"><input id="ctName" name="name" type="text" placeholder=" " autocomplete="name" required><label for="ctName">Your name</label><i class="ct-u"></i><small class="ct-err">Add your name so we know who to thank.</small></div>
+          <div class="ct-fld"><input id="ctEmail" name="email" type="email" placeholder=" " autocomplete="email" inputmode="email" required><label for="ctEmail">Your email</label><i class="ct-u"></i><small class="ct-err">That email looks incomplete.</small></div>
+          <div class="ct-fld"><input id="ctCompany" name="company" type="text" placeholder=" " autocomplete="organization"><label for="ctCompany">Company (optional)</label><i class="ct-u"></i></div>
+        </fieldset>
+
+        <fieldset class="ct-step">
+          <legend>What do you need help with?</legend>
+          <p class="ct-sub">Pick as many as you like.</p>
+          <div class="ct-tiles">
+            <label class="ct-tile"><input type="checkbox" name="svc" value="Brand identity"><span><i class="fa-solid fa-gem"></i>Brand identity</span></label>
+            <label class="ct-tile"><input type="checkbox" name="svc" value="Website"><span><i class="fa-solid fa-laptop-code"></i>Website</span></label>
+            <label class="ct-tile"><input type="checkbox" name="svc" value="Campaign"><span><i class="fa-solid fa-hashtag"></i>Campaign</span></label>
+            <label class="ct-tile"><input type="checkbox" name="svc" value="Packaging"><span><i class="fa-solid fa-box-open"></i>Packaging</span></label>
+            <label class="ct-tile"><input type="checkbox" name="svc" value="Motion"><span><i class="fa-solid fa-film"></i>Motion</span></label>
+            <label class="ct-tile"><input type="checkbox" name="svc" value="Something else"><span><i class="fa-solid fa-wand-magic-sparkles"></i>Something else</span></label>
+          </div>
+          <small class="ct-tiles-err">Pick at least one so we can point you to the right person.</small>
+        </fieldset>
+
+        <fieldset class="ct-step">
+          <legend>Roughly what budget and timing?</legend>
+          <div class="ct-budget">
+            <div class="ct-bval" id="ctBVal" aria-live="polite">₹1L – ₹2.5L</div>
+            <input class="ct-range" id="ctRange" name="budget_level" type="range" min="0" max="4" step="1" value="2" style="--fill:50%" aria-label="Budget range">
+            <div class="ct-ticks" aria-hidden="true"><span>₹50k</span><span>₹1L</span><span>₹2.5L</span><span>₹5L</span><span>₹5L+</span></div>
+          </div>
+          <div class="ct-pills" role="radiogroup" aria-label="When do you want to start">
+            <label><input type="radio" name="timing" value="As soon as possible"><span>As soon as possible</span></label>
+            <label><input type="radio" name="timing" value="In 1–2 months" checked><span>In 1–2 months</span></label>
+            <label><input type="radio" name="timing" value="Just exploring"><span>Just exploring</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="ct-step">
+          <legend>Last one. Tell us the story.</legend>
+          <div class="ct-fld ct-msg"><textarea id="ctMsg" name="message" rows="5" maxlength="400" placeholder=" " required></textarea><label for="ctMsg">What are you building, and why now?</label><i class="ct-u"></i><small class="ct-err">Tell us a little more. Ten characters is enough.</small>
+            <svg class="ct-cnt" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="14"/><circle id="ctRingFill" cx="18" cy="18" r="14"/></svg>
+          </div>
+          <p class="ct-sum" id="ctSum"></p>
+        </fieldset>
+      </div>
+
+      <div class="ct-nav">
+        <button type="button" class="btn btn-ghost btn-sm" id="ctBack" style="visibility:hidden"><i class="fa-solid fa-arrow-left"></i> Back</button>
+        <button type="button" class="btn" id="ctNext"><span>Next</span> <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <p class="ct-fail" id="ctFail" role="alert">Something went wrong sending that. Please try again or email hello@stackly.studio.</p>
+
+      <i class="fa-solid fa-paper-plane ct-fly" aria-hidden="true"></i>
+      <div class="ct-done" id="ctDone" role="status" aria-live="polite" hidden>
+        <span class="ct-seal">Delivered</span>
+        <h3 id="ctDoneH">Thanks! We have it.</h3>
+        <p>We will reply within one working day. Keep an eye on your inbox.</p>
+        <button type="button" class="btn btn-ghost btn-sm" id="ctAgain"><i class="fa-solid fa-rotate-left"></i> Send another message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- 4 · BOARD: a split-flap departures board shows what happens after you press send -->
+<section class="sec ct-sec ct-boardsec" id="ctBoard">
+  <div class="ct-board-head">
+    <div class="head"><p class="tag">After you press send</p><h2>What happens next, on the departures board.</h2></div>
+    <figure class="ct-board-img"><img src="Assest/bs18.webp" alt="A laptop with code on launch day" loading="lazy"><i class="fa-solid fa-plane ct-cross" aria-hidden="true"></i></figure>
+  </div>
+  <div class="ct-board" id="ctBoardEl" aria-hidden="true">
+    <div class="ct-btop"><span><i class="fa-solid fa-plane-departure"></i> Departures</span><button class="ct-replay" id="ctReplay" type="button" aria-label="Replay the board"><i class="fa-solid fa-rotate-right"></i></button></div>
+    <div class="ct-brow" data-when="TODAY" data-what="WE READ IT ALL"></div>
+    <div class="ct-brow" data-when="24 HRS" data-what="A HUMAN REPLIES"></div>
+    <div class="ct-brow" data-when="3 DAYS" data-what="30 MIN CALL"></div>
+    <div class="ct-brow" data-when="1 WEEK" data-what="PROPOSAL + COST"></div>
+    <div class="ct-brow" data-when="WEEK 2" data-what="KICKOFF DAY"></div>
+    <div class="ct-brow ct-live-row" data-when="NOW" data-cycle="NOW BOARDING|NEXT: NEW BRAND|NO DELAYS TODAY"></div>
+  </div>
+  <ul class="ct-vh">
+    <li>Today: we read every word.</li><li>Within 24 hours: a real person replies.</li><li>Within 3 days: a 30 minute intro call.</li><li>Within 1 week: proposal and price.</li><li>Within 2 weeks: kickoff workshop.</li>
+  </ul>
+</section>
+
+<!-- 5 · ORBIT: pick a face, it starts "calling" -->
+<section class="sec ct-sec ct-orbsec" id="ctOrbit">
+  <div class="head"><p class="tag">Who answers</p><h2>Meet the people on the other end.</h2></div>
+  <div class="ct-orb-grid">
+    <div class="ct-stage" id="ctStage">
+      <div class="ct-ring ct-ring-in" aria-hidden="true">
+        <div class="ct-slot" style="--a:0deg"><div class="ct-av"><span class="ct-chipo"><i class="fa-solid fa-pen-nib"></i></span></div></div>
+        <div class="ct-slot" style="--a:90deg"><div class="ct-av"><span class="ct-chipo"><i class="fa-solid fa-code"></i></span></div></div>
+        <div class="ct-slot" style="--a:180deg"><div class="ct-av"><span class="ct-chipo"><i class="fa-solid fa-film"></i></span></div></div>
+        <div class="ct-slot" style="--a:270deg"><div class="ct-av"><span class="ct-chipo"><i class="fa-solid fa-chart-line"></i></span></div></div>
+      </div>
+      <div class="ct-ring ct-ring-out" id="ctRing">
+        <div class="ct-slot" style="--a:0deg"><div class="ct-av"><button type="button" class="ct-pbtn" aria-pressed="false" data-name="Maya Rao" data-role="Creative Director" data-mail="maya@stackly.studio" data-best="New identities and rebrands" data-hi="Send me your wildest brand idea. I love a blank page." data-reply="4 hours"><img src="Assest/bs20.webp" alt="Maya Rao, Creative Director"><i class="ct-pring"></i></button></div></div>
+        <div class="ct-slot" style="--a:90deg"><div class="ct-av"><button type="button" class="ct-pbtn" aria-pressed="false" data-name="Arjun Mehta" data-role="Strategy Lead" data-mail="arjun@stackly.studio" data-best="Positioning, naming and launch plans" data-hi="Not sure where to start? We will map it out together." data-reply="6 hours"><img src="Assest/bs21.webp" alt="Arjun Mehta, Strategy Lead"><i class="ct-pring"></i></button></div></div>
+        <div class="ct-slot" style="--a:180deg"><div class="ct-av"><button type="button" class="ct-pbtn" aria-pressed="false" data-name="Sara Khan" data-role="Motion Designer" data-mail="sara@stackly.studio" data-best="Logo reveals, social motion and brand films" data-hi="If it should move, bring it to me." data-reply="1 day"><img src="Assest/bs22.webp" alt="Sara Khan, Motion Designer"><i class="ct-pring"></i></button></div></div>
+        <div class="ct-slot" style="--a:270deg"><div class="ct-av"><button type="button" class="ct-pbtn" aria-pressed="false" data-name="Dev Patel" data-role="Lead Developer" data-mail="dev@stackly.studio" data-best="Websites, web apps and fast builds" data-hi="Tell me what the site needs to do and I will make it quick." data-reply="8 hours"><img src="Assest/bs23.webp" alt="Dev Patel, Lead Developer"><i class="ct-pring"></i></button></div></div>
+      </div>
+      <div class="ct-hubpos"><div class="ct-hub" id="ctHub"><i class="ct-rip"></i><i class="ct-rip"></i><i class="ct-rip"></i><img id="ctHubImg" alt=""><span class="ct-hub-t"><i class="fa-solid fa-headset"></i>Tap a face</span></div></div>
+    </div>
+
+    <div class="ct-card" id="ctCard">
+      <p class="ct-st" id="ctSt"><i class="ct-live"></i> Pick someone to call</p>
+      <h3 class="ct-c-name">Maya Rao</h3>
+      <p class="ct-c-role">Creative Director</p>
+      <div class="ct-wave" id="ctWave" aria-hidden="true"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i><i style="--k:5"></i><i style="--k:6"></i><i style="--k:7"></i><i style="--k:8"></i><i style="--k:9"></i><i style="--k:10"></i><i style="--k:11"></i></div>
+      <p class="ct-c-hi">Send me your wildest brand idea. I love a blank page.</p>
+      <dl class="ct-facts"><div><dt>Best for</dt><dd class="ct-c-best">New identities and rebrands</dd></div><div><dt>Usually replies in</dt><dd class="ct-c-reply">4 hours</dd></div></dl>
+      <a href="404.html" class="btn ct-c-mail"><i class="fa-solid fa-envelope"></i> <span>Email Maya</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · VISIT: the real sky over Salem (and a time slider), plus a map that unfolds -->
+<section class="sec ct-sec ct-visit" id="ctVisit">
+  <div class="head"><p class="tag">Visit the studio</p><h2>Our door is open. The sky is on our side.</h2></div>
+  <div class="ct-visit-grid">
+    <div class="ct-left">
+      <div class="ct-sky" id="ctSky" role="img" aria-label="A live sky over Salem that changes with the time of day">
+        <div class="ct-stars" id="ctStars" aria-hidden="true"></div>
+        <i class="ct-sun" id="ctSun" aria-hidden="true"></i>
+        <i class="ct-moon" id="ctMoon" aria-hidden="true"></i>
+        <i class="ct-cloud k1" aria-hidden="true"></i><i class="ct-cloud k2" aria-hidden="true"></i><i class="ct-cloud k3" aria-hidden="true"></i>
+        <svg class="ct-city" viewBox="0 0 600 180" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+          <defs><linearGradient id="ctBeam" x1="0" x2="1"><stop offset="0" stop-color="#ffb02e" stop-opacity=".9"/><stop offset="1" stop-color="#ffb02e" stop-opacity="0"/></linearGradient></defs>
+          <path d="M0 118 L50 92 L100 108 L170 58 L230 98 L300 72 L370 104 L450 50 L520 92 L560 74 L600 96 V180 H0Z" fill="#190e2a"/>
+          <g fill="#0d0716">
+            <rect x="0" y="104" width="34" height="76"/><rect x="34" y="88" width="28" height="92"/><rect x="62" y="110" width="22" height="70"/><rect x="84" y="76" width="34" height="104"/><rect x="118" y="100" width="26" height="80"/><rect x="144" y="66" width="30" height="114"/><rect x="174" y="94" width="36" height="86"/><rect x="210" y="106" width="24" height="74"/><rect x="234" y="82" width="32" height="98"/><rect x="266" y="98" width="28" height="82"/><rect x="294" y="110" width="30" height="70"/><rect x="324" y="90" width="34" height="90"/><rect x="358" y="60" width="30" height="120"/><rect x="388" y="96" width="28" height="84"/><rect x="416" y="108" width="26" height="72"/><rect x="442" y="92" width="24" height="88"/><rect x="500" y="100" width="30" height="80"/><rect x="530" y="84" width="26" height="96"/><rect x="556" y="106" width="24" height="74"/><rect x="580" y="92" width="20" height="88"/>
+          </g>
+          <g fill="#ffb02e">
+            <rect class="wn" style="--k:0.9" x="8" y="112" width="4" height="5"/><rect class="wn" style="--k:0.5" x="20" y="124" width="4" height="5"/><rect class="wn" style="--k:0.8" x="40" y="96" width="4" height="5"/><rect class="wn" style="--k:0.6" x="50" y="110" width="4" height="5"/><rect class="wn" style="--k:1" x="90" y="84" width="4" height="5"/><rect class="wn" style="--k:0.7" x="104" y="96" width="4" height="5"/><rect class="wn" style="--k:0.9" x="150" y="74" width="4" height="5"/><rect class="wn" style="--k:0.5" x="162" y="90" width="4" height="5"/><rect class="wn" style="--k:0.8" x="180" y="102" width="4" height="5"/><rect class="wn" style="--k:0.6" x="196" y="112" width="4" height="5"/><rect class="wn" style="--k:1" x="242" y="90" width="4" height="5"/><rect class="wn" style="--k:0.7" x="254" y="104" width="4" height="5"/><rect class="wn" style="--k:0.9" x="300" y="118" width="4" height="5"/><rect class="wn" style="--k:0.8" x="364" y="68" width="4" height="5"/><rect class="wn" style="--k:0.5" x="376" y="84" width="4" height="5"/><rect class="wn" style="--k:0.9" x="504" y="108" width="4" height="5"/><rect class="wn" style="--k:0.7" x="536" y="92" width="4" height="5"/><rect class="wn" style="--k:0.5" x="544" y="108" width="4" height="5"/><rect class="wn" style="--k:0.8" x="590" y="102" width="4" height="5"/>
+          </g>
+        </svg>
+        <div class="ct-clock"><b id="ctTime">--:--</b><span class="ct-state" id="ctState"><i></i> Checking the studio…</span></div>
+      </div>
+      <div class="ct-hours">
+        <span class="ct-hours-hint">Tap a day to preview its hours</span>
+        <ul id="ctHours" aria-label="Studio opening hours">
+          <li data-d="1"><span>Monday</span><b>10:00 – 18:30</b></li>
+          <li data-d="2"><span>Tuesday</span><b>10:00 – 18:30</b></li>
+          <li data-d="3"><span>Wednesday</span><b>10:00 – 18:30</b></li>
+          <li data-d="4"><span>Thursday</span><b>10:00 – 18:30</b></li>
+          <li data-d="5"><span>Friday</span><b>10:00 – 18:30</b></li>
+          <li data-d="6"><span>Saturday</span><b>10:00 – 14:00</b></li>
+          <li data-d="0"><span>Sunday</span><b>Closed</b></li>
+        </ul>
+        <label class="ct-scrub" for="ctScrub">Slide through the day <output id="ctScrubOut" for="ctScrub"></output></label>
+        <input class="ct-range" id="ctScrub" type="range" min="0" max="1439" step="1" value="0" style="--fill:0%">
+        <button class="btn btn-ghost btn-sm" id="ctLive" type="button"><i class="fa-solid fa-satellite-dish"></i> Back to live</button>
+      </div>
+    </div>
+
+    <div class="ct-map" id="ctMap">
+      <iframe title="Map of the Stackly studio area in Salem" src="https://www.openstreetmap.org/export/embed.html?bbox=78.1100%2C11.6400%2C78.1820%2C11.6900&amp;layer=mapnik" loading="lazy" referrerpolicy="no-referrer"></iframe>
+      <div class="ct-pin" aria-hidden="true"><i></i><i></i><b class="fa-solid fa-location-dot"></b></div>
+      <div class="ct-addr"><b>Stackly Studio</b><span>12 Design Lane, Salem, Tamil Nadu</span><a href="404.html">Get directions <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+      <figure class="ct-pola"><img src="Assest/bs6.webp" alt="Colour swatches pinned above a studio desk" loading="lazy"><figcaption>Our desk</figcaption></figure>
+      <button class="ct-tap" id="ctTap" type="button"><i class="fa-solid fa-hand-pointer"></i> Tap to explore the map</button>
+      <button class="ct-lock" id="ctLock" type="button" aria-label="Lock the map so the page scrolls again"><i class="fa-solid fa-lock"></i> Lock map</button>
+      <i class="ct-fold" aria-hidden="true"></i><i class="ct-fold" aria-hidden="true"></i><i class="ct-fold" aria-hidden="true"></i>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · BUBBLES: a pile of social links with real physics. Drag, throw, tap. -->
+<section class="sec ct-sec ct-bubsec" id="ctBubbles">
+  <div class="ct-bub-top">
+    <div class="head"><p class="tag">Find us elsewhere</p><h2>Our corners of the internet. Toss them around.</h2></div>
+    <button class="btn btn-ghost btn-sm" id="ctShake" type="button"><i class="fa-solid fa-wand-magic-sparkles"></i> Shake the pile</button>
+  </div>
+  <div class="ct-pit" id="ctPit">
+    <a class="ct-bub b-gold" href="404.html" data-r="62" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+    <a class="ct-bub b-cream" href="404.html" data-r="52" target="_blank" rel="noopener" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i><span>Dribbble</span></a>
+    <a class="ct-bub b-line" href="404.html" data-r="56" target="_blank" rel="noopener" aria-label="Behance"><i class="fa-brands fa-behance"></i><span>Behance</span></a>
+    <a class="ct-bub b-gold" href="404.html" data-r="48" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span></a>
+    <a class="ct-bub b-cream" href="404.html" data-r="44" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i><span>X</span></a>
+    <a class="ct-bub b-line" href="404.html" data-r="46" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+    <a class="ct-bub b-soft" href="404.html" data-r="50" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i><span>YouTube</span></a>
+    <a class="ct-bub b-img" href="404.html" data-r="74" aria-label="See our work"><img src="Assest/bs6.webp" alt="" draggable="false"><span>Our work</span></a>
+    <a class="ct-bub b-img" href="404.html" data-r="58" aria-label="See our services"><img src="Assest/bs2.webp" alt="" draggable="false"><span>Services</span></a>
+    <a class="ct-bub b-img" href="404.html" data-r="64" aria-label="Read the journal"><img src="Assest/bs9.webp" alt="" draggable="false"><span>Journal</span></a>
+  </div>
+  <p class="ct-bub-note"><i class="fa-solid fa-hand"></i> Drag, throw, or tap a bubble to visit.</p>
+</section>
+
+</main>
+
+<!-- FOOTER (same as the other pages) -->
+<footer class="footer">
+  <div class="f-top">
+    <div><a href="index.html" class="f-logo" aria-label="Stackly home"><img src="Assest/stackly-logo.webp" alt="Stackly" width="150" height="40"></a><p>A branding studio building identities that last.</p>
+      <div class="social"><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a><a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div></div>
+    <div><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="404.html">Services</a><a href="404.html">Blog</a><a href="contact.html">Contact</a></div>
+    <div><h4>Studio</h4><a href="404.html">Work</a><a href="404.html">Process</a><a href="404.html">Team</a><a href="404.html">Clients</a></div>
+    <div class="news"><h4>Stay in the loop</h4><p>Monthly design notes. No spam.</p>
+      <form class="nl" id="nl"><input type="email" required placeholder="Your email" aria-label="Email address"><button aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button></form>
+      <span class="nlok" id="nlok"><i class="fa-solid fa-circle-check"></i> You're on the list!</span>
+      <ul class="f-contact"><li><i class="fa-solid fa-envelope"></i> hello@stackly.studio</li><li><i class="fa-solid fa-phone"></i> +91 98765 43210</li><li><i class="fa-solid fa-location-dot"></i> Chennai, India</li></ul></div>
+  </div>
+  <div class="bigword" aria-hidden="true">STACKLY</div>
+  <p class="copy">© 2026 Stackly Branding Studio. All rights reserved.</p>
+</footer>
+<button class="top" id="top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
